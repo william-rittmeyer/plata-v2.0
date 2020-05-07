@@ -1,0 +1,298 @@
+<template>
+    <div class="animation-area" id ="animation-area" style="filter: blur(0px); filter: brightness(1);">  
+
+    <ul class="box-area">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>  
+
+  <div>
+  <nav class="bg-white shadow-sm">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between h-16">
+      <div class="flex">
+        <div class="hidden sm:ml-6 sm:flex">
+
+          <nuxt-link
+            to="/"
+            class="ml-8 inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out"
+          >
+            Home
+          </nuxt-link>
+          
+          <nuxt-link
+            v-if="$store.state.user"
+            to="/account"
+            class="ml-8 inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out"
+          >
+           Account
+          </nuxt-link>
+
+          <nuxt-link
+            v-if="$store.state.user"
+            to="/sell"
+            class="ml-8 inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out"
+          >
+          File Exchange
+          </nuxt-link>
+
+          <nuxt-link
+            v-if="$store.state.user"
+            to="/sell"
+            class="ml-8 inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out"
+          >
+          Database Access
+          </nuxt-link>
+          
+          <nuxt-link
+            to="/about"
+            class="ml-8 inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out"
+          >
+          About
+          </nuxt-link>
+          
+          <nuxt-link
+            v-if="!$store.state.user"
+            to="/registration"
+            class="ml-8 inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out"
+          >
+            Register
+          </nuxt-link>
+          
+          <a
+            v-if="$store.state.user"
+            @click="logout"
+            class="ml-8 inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out"
+          >
+            Logout
+          </a>
+
+          <nuxt-account
+            class="ml-8 inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium text-gray-1000"
+            id = "account"
+          >
+            Connected Account: 0x81202D123EA0576f600d1cd0CeC44E4F8f5C59e6
+          </nuxt-account>
+
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</nav>
+
+  <div>
+
+            <p class="text-bottom" credit><a href="https://sensorweb.engr.uga.edu/">SensorWeb Research Laboratory</a> - &copy; 2020 - <a href="https://sensorweb.engr.uga.edu/index.php/people/">William Rittmeyer</a> and <a href="https://sensorweb.engr.uga.edu/index.php/people/">Soumya Pal</a></p>
+          </div>
+
+    <nuxt/>
+  </div>
+  </div>
+
+
+</template>
+
+<script>
+export default {
+  methods: {
+  async logout() {
+    try {
+      await this.$axios.post('/api/logout')
+
+      this.$store.commit('SET_USER',null)
+
+    }  catch (err) {
+       throw new Error(err)
+    }
+    
+  }
+  }
+}
+</script>
+
+<style>
+html {
+  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-size: 16px;
+  word-spacing: 1px;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.button--green {
+  display: inline-block;
+  border-radius: 4px;
+  border: 1px solid white;
+  color: black;
+  text-decoration: none;
+  padding: 10px 30px;
+  position: fixed;
+  top: 80%;
+  left: 45%;
+  margin-top: -50px;
+  margin-left: -100px;
+
+}
+
+.button--green:hover {
+  color: black;
+  background-color: white;
+}
+
+.button--grey {
+  display: inline-block;
+  border-radius: 4px;
+  border: 1px solid white;
+  color: black;
+  text-decoration: none;
+  padding: 10px 30px;
+  margin-left: 15px;
+  position: fixed;
+  top: 80%;
+  left: 55%;
+  margin-top: -50px;
+  margin-left: -100px;
+}
+
+.button--grey:hover {
+  color: black;
+  background-color: white;
+}
+
+.animation-area{
+    background: linear-gradient(to left, rgb(0, 69, 231), rgb(0, 219, 243));
+    width:100%;
+    height: 100vh;
+    z-index: -5;
+
+}
+
+
+.box-area{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height:100%;
+    overflow: hidden;
+    z-index: -3;
+
+
+}
+
+
+.box-area li{
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 25px;
+    height: 25px;
+    background: rgba(255,255,255,0.2);
+    animation: animate 20s linear infinite;
+    bottom: -150px;
+   
+
+}
+
+.box-area li:nth-child(1){
+    left: 86%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 14s;
+
+}
+.box-area li:nth-child(2){
+    left: 30%;
+    width: 30px;
+    height: 30px;
+    animation-delay: 5s;
+    animation-duration: 12s;
+
+}
+.box-area li:nth-child(3){
+    left: 70%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 25s;
+
+}
+.box-area li:nth-child(4){
+    left: 42%;
+    width: 30px;
+    height: 30px;
+    animation-delay: 22s;
+    animation-duration: 27s;
+}
+
+.box-area li:nth-child(5){
+    left: 65%;
+    width: 20px;
+    height: 20px;
+    animation-duration: 20s;
+    animation-delay:8s;
+}
+.box-area li:nth-child(6){
+    left: 5%;
+    width: 150px;
+    height: 150px;
+    animation-duration: 25s;
+    animation-delay:12s;
+}
+.box-area li:nth-child(7){
+    left: 28%;
+    width: 30px;
+    height: 30px;
+    animation-duration: 10s;
+    animation-delay:25s;
+}
+
+.box-area li:nth-child(8){
+    left: 50%;
+    width: 180px;
+    height: 180px;
+    animation-duration: 30s;
+    animation-delay:0s;
+}
+
+
+@keyframes animate{
+    0%{
+        transform: translateY(200px) rotate(0deg);
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(-800px) rotate(360deg);
+        opacity: 0;
+    }
+
+}
+
+.text-bottom {
+    color: white;
+    position: fixed;
+    bottom: 1px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+</style>
