@@ -1,6 +1,6 @@
 # node-authentification
 
-> My bedazzling Nuxt.js project
+> My Nuxt.js project
 
 ## Build Setup
 
