@@ -1,4 +1,4 @@
-# node-authentification
+# Plata-2.0
 
 > My Nuxt.js project
 
