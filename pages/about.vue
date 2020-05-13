@@ -13,9 +13,10 @@
     </div>
     <div class="parallax" id="parallax-cta" style="background-image:url(https://www.solodev.com/assets/hero/hero.jpg);"></div>
   </section>
+
   <section class="story-section company-sections ct-u-paddingBoth100 paddingBothHalf noTopMobilePadding" id="section">
     <div class="container text-center">
-      <h2>Data Exchange Platform</h2>
+      <h2></h2>
       <h3>IPFS - Ethereum - IPFS</h3>
       <div class="col-md-8 col-md-offset-2">
         <div class="red-border"></div>
@@ -74,7 +75,10 @@ export default {
     line-height: 80px;
     color: white;
     font-weight: 700 !important;
-    text-align: center;
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 .seo-header, .product-header, .intro-type .container h1.white, .company-heading h1 {
     font-family: 'Raleway', sans-serif;
@@ -87,6 +91,11 @@ export default {
     font-weight: 800;
     color: white;
     font-size: 50px;
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
 }
 .company-sections h2, .company-sections h3, .careers-sections h2, .perks-section h2 {
     font-family: 'proxima-nova', sans-serif;
@@ -98,16 +107,28 @@ export default {
     margin: 14px 0;
     font-family: 'proxima-nova', sans-serif;
     text-transform: capitalize;
+    position: fixed;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 .red-border {
     width: 50%;
     border-bottom: 1px solid white;
     margin: 0 auto;
     height: 16px;
+    position: fixed;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 .company-sections p {
     margin-top: 20px;
     color: white;
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 .ct-u-size22 {
     font-size: 22px;
