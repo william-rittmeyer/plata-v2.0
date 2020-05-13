@@ -16,7 +16,7 @@
   <div>
   <nav class="bg-white shadow-sm">
   <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex justify-between h-16">
+    <div class="flex justify-between items-center h-16">
       <div class="flex">
         <div class="hidden sm:ml-6 sm:flex">
 
@@ -27,14 +27,6 @@
             Home
           </nuxt-link>
           
-          <nuxt-link
-            v-if="$store.state.user"
-            to="/account"
-            class="ml-8 inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out"
-          >
-           Account
-          </nuxt-link>
-
           <nuxt-link
             v-if="$store.state.user"
             to="/sell"
@@ -60,10 +52,18 @@
           
           <nuxt-link
             v-if="!$store.state.user"
-            to="/registration"
+            to="/register"
             class="ml-8 inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out"
           >
             Register
+          </nuxt-link>
+
+          <nuxt-link
+            v-if="!$store.state.user"
+            to="/login"
+            class="ml-8 inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out"
+          >
+            Login
           </nuxt-link>
           
           <a
@@ -84,6 +84,23 @@
 
         </div>
       </div>
+
+      <nuxt-link
+      to="/profile" v-if="$store.state.user"
+      >
+
+      <svg
+        fill="currentColor" 
+        viewBox="0 0 20 20" 
+        class="mt-1 w-8 h-8 text-gray-500"
+      >
+      <path 
+        fill-rule="evenodd"
+        d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z" clip-rule="evenodd"
+      ></path>
+      </svg>
+      </nuxt-link>
+
 
     </div>
   </div>
@@ -109,6 +126,12 @@ export default {
       await this.$axios.post('/api/logout')
 
       this.$store.commit('SET_USER',null)
+
+      if (this.$route.path === '/profile') 
+        { 
+        this.$router.push('/')
+
+        }
 
     }  catch (err) {
        throw new Error(err)
@@ -148,7 +171,7 @@ html {
   padding: 10px 30px;
   position: fixed;
   top: 80%;
-  left: 45%;
+  left: 47%;
   margin-top: -50px;
   margin-left: -100px;
 
@@ -169,7 +192,7 @@ html {
   margin-left: 15px;
   position: fixed;
   top: 80%;
-  left: 55%;
+  left: 57%;
   margin-top: -50px;
   margin-left: -100px;
 }
