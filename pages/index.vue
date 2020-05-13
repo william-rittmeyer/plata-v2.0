@@ -1,14 +1,14 @@
 <template>
-  <div class="container">
+  <div class="container mx-auto text-center py-16 px-6">
 
    <div v-if="$store.state.user">
-      <logo />
-      <h1 class="title">
+      <h1 class="text-4xl text-white">
         Plata 2.0
       </h1>
       <h2 class="subtitle">
         Welcome!!! you are logged in to the home screen
       </h2>
+
 
       <nuxt-link
             to="/account"
@@ -23,11 +23,11 @@
           >
           About
           </nuxt-link>
+
       </div>
 
     <div v-if="!$store.state.user">
-      <logo />
-      <h1 class="title">
+      <h1 class="text-4xl text-white">
         Plata 2.0
       </h1>
       <h2 class="subtitle">
@@ -70,18 +70,19 @@ export default {
 /* Sample `apply` at-rules with Tailwind CSS
 .container {
   @apply min-h-screen flex justify-center items-center text-center mx-auto;
+
 }
 */
 
+
 .title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
+  font-family: 'Arial', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
     'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   display: block;
   font-weight: 300;
   font-size: 100px;
   color: white;
   letter-spacing: 1px;
-  text-align:center
 }
 
 .subtitle {
@@ -91,7 +92,7 @@ export default {
   color: white;
   word-spacing: 5px;
   padding-bottom: 15px;
-  text-align:center
+
 }
 
 .links {
