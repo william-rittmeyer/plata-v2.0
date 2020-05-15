@@ -2,9 +2,16 @@
   <div class="container mx-auto text-center py-16 px-6">
 
    <div v-if="$store.state.user">
-      <h1 class="text-4xl text-white">
+
+    <br></br>
+
+   <img src="../assets/placeholder_logo.png" class="front_image">
+ 
+
+      <h1 class="title text-white">
         Plata 2.0
       </h1>
+      <br></br>
       <h2 class="subtitle">
         Welcome!!! you are logged in to the home screen
       </h2>
@@ -27,9 +34,19 @@
       </div>
 
     <div v-if="!$store.state.user">
-      <h1 class="text-4xl text-white">
+
+    <br></br>
+
+
+
+   <img src="../assets/placeholder_logo.png" class="front_image">
+
+
+
+      <h1 class="title text-white">
         Plata 2.0
       </h1>
+      <br></br>
       <h2 class="subtitle">
         An Ethereum-based platform for exchanging digital assets
       </h2>
@@ -63,7 +80,7 @@ export default {
   components: {
     Logo
   }
-}
+  }
 </script>
 
 <style>
@@ -76,18 +93,17 @@ export default {
 
 
 .title {
-  font-family: 'Arial', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family: sans-serif;
   display: block;
   font-weight: 300;
-  font-size: 100px;
+  font-size: 50px;
   color: white;
   letter-spacing: 1px;
 }
 
 .subtitle {
   font-weight: 300;
-  font-size: 42px;
+  font-size: 35px;
   text-allign: center;
   color: white;
   word-spacing: 5px;
@@ -97,6 +113,10 @@ export default {
 
 .links {
   padding-top: 15px;
+}
+
+.front_image {
+  width: 300px;
 }
 
 
