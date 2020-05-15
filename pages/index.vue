@@ -35,17 +35,17 @@
       </h2>
 
       <nuxt-link
-            to="/account"
+            to="/login"
             class="button--green "
           >
           Login
           </nuxt-link>
 
           <nuxt-link
-            to="/about"
+            to="/register"
             class="button--grey "
           >
-          About
+          Register
           </nuxt-link>
       </div>
 
