@@ -17,11 +17,13 @@
   <section class="story-section company-sections ct-u-paddingBoth100 paddingBothHalf noTopMobilePadding" id="section">
     <div class="container text-center">
       <h2></h2>
-      <h3>IPFS - Ethereum - IPFS</h3>
+      <h3>IPFS - Ethereum - Orbitdb</h3>
       <div class="col-md-8 col-md-offset-2">
         <div class="red-border"></div>
         <p class="ct-u-size22 ct-u-fontWeight300 marginTop40">Plata is an Ethereum-based marketplace platform that facilitates the exchange of digital assets as well as database access. Data itself is stored on a decentralized cloud provided by IPFS.</p>
-        <!-- <a class="ct-u-marginTop60 btn btn-solodev-red btn-fullWidth-sm ct-u-size19" href="#">Learn More</a> -->
+        <img src="../assets/IPFS.png" class="ipfs_logo logos">
+        <img src="../assets/ethereum.png" class="ethereum_logo logos">
+        <img src="../assets/orbitdb.png" class="orbitdb_logo logos">
       </div>
     </div>
   </section>
@@ -310,4 +312,28 @@ section.clients-home .clients-logos .client-logos-repeater img {
   color: #fff;
 }
 
+.logos {
+position: absolute;
+    top: 70%;
+
+}
+
+
+.ipfs_logo {
+width: 100px;
+    left: 38%;
+
+}
+
+.ethereum_logo {
+width: 60px;
+    left: 49%;
+
+}
+
+.orbitdb_logo {
+width: 200px;
+    left: 57%;
+
+}
 </style>
