@@ -1,4 +1,4 @@
-<template>
+ <template>
     <div class="animation-area" id ="animation-area" style="filter: blur(0px); filter: brightness(1);">  
 
     <ul class="box-area">
@@ -101,6 +101,12 @@
       </svg>
       </nuxt-link>
 
+      <img src="../assets/placeholder_logo.png" class="corner_logo">
+
+      <h1 class="logo_title">
+        Plata 2.0
+      </h1>
+
 
     </div>
   </div>
@@ -144,8 +150,7 @@ export default {
 
 <style>
 html {
-  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family: sans-serif;
   font-size: 16px;
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;
@@ -316,6 +321,23 @@ html {
     bottom: 1px;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.corner_logo {
+position: absolute;
+width: 80px;
+    top: 10%;
+    left: 2%;
+  
+}
+
+.logo_title {
+position: absolute;
+    top: 11.5%;
+    left: 7%;
+    font-size: 35px;
+    color: white;
+  
 }
 
 </style>
