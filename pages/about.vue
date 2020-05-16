@@ -20,7 +20,11 @@
       <h3>IPFS - Ethereum - Orbitdb</h3>
       <div class="col-md-8 col-md-offset-2">
         <div class="red-border"></div>
-        <p class="ct-u-size22 ct-u-fontWeight300 marginTop40">Plata is an Ethereum-based marketplace platform that facilitates the exchange of digital assets as well as database access. Data itself is stored on a decentralized cloud provided by IPFS.</p>
+        <p class="ct-u-size22 ct-u-fontWeight300 marginTop40">Plata is an Ethereum-based marketplace platform that facilitates the 
+        exchange of digital assets as well as database access. Files uploaded to Plata are encrypted and stored on a decentralized 
+        cloud provided by IPFS. Through the use of smart contracts provided by the Ethereum blockchain, users are able to securely
+         buy and sell digital assets. Plata also offers a feature of buying and selling database access. Databases are hosted on 
+         orbitdb which is a database engine on IPFS which make Plata very useful for IoT.</p>
         <img src="../assets/IPFS.png" class="ipfs_logo logos">
         <img src="../assets/ethereum.png" class="ethereum_logo logos">
         <img src="../assets/orbitdb.png" class="orbitdb_logo logos">
@@ -128,7 +132,7 @@ export default {
     margin-top: 20px;
     color: white;
     position: fixed;
-    top: 30%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
