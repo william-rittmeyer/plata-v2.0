@@ -162,8 +162,8 @@ body {
   border-radius: 5px;
   box-shadow: 0 0 5px #03e9f4,
               0 0 25px #03e9f4,
-              0 0 50px #03e9f4,
-              0 0 100px #03e9f4;
+              0 0 0px #03e9f4,
+              0 0 0px #03e9f4;
 } 
 
 .login-box button:hover {
@@ -172,8 +172,8 @@ body {
   border-radius: 5px;
   box-shadow: 0 0 5px #03e9f4,
               0 0 25px #03e9f4,
-              0 0 50px #03e9f4,
-              0 0 100px #03e9f4;
+              0 0 0px #03e9f4,
+              0 0 0px red;
 }
 
 .login-box a span {
@@ -235,7 +235,5 @@ body {
 
 
 
-
-</style>
 
 </style>
