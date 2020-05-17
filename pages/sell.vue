@@ -1,39 +1,45 @@
 <template>
+
   <section>
+   <h1 class="sell">
+        File exchange page
+      </h1>
 
- 
-    <h1>Sell Data Here</h1>
-
-    <v-data-table :items="videos" :headers="headers">
-
-    </v-data-table>
 
   </section>
 </template>
 
 <script>
 export default {
-computed: {
-	headers(){
-		return [
-		{text: 'Data', value: 'data'},
-		{text: 'Decription', value: 'description'},
-		{text: 'Seller', value: 'seller'},
-		{text: 'Price', value: 'price'},
-		{text: 'Tags', value: 'tags'}
-		]
+
+	fetch({store, redirect}) {
+	if (
+	!store.state.user || 
+	(store.state.user && store.state.user.
+	isAuthenticated ===false)
+	) {
+	return redirect('/')
 	}
+	}
+
 }
-
-
-}
-
 
 </script>
 
 <style lang="css">
 
-
+.sell{
+	position: absolute;
+	top:50%;
+	left: 37%;
+	font-family: sans-serif;
+  	display: block;
+  	font-weight: 300;
+  	font-size: 50px;
+  	color: white;
+  	letter-spacing: 1px;
+}
 
 
 </style>
+
