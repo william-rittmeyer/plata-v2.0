@@ -50,7 +50,7 @@ export default {
           password: this.password
         })
         this.$store.commit('SET_USER', response.data)
-          this.$router.push('/account')
+          this.$router.push('/profile')
     } catch (err) {
       throw new Error(err)
     }
