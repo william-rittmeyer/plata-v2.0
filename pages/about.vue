@@ -104,14 +104,14 @@ export default {
 
 }
 .company-sections h2, .company-sections h3, .careers-sections h2, .perks-section h2 {
-    font-family: 'proxima-nova', sans-serif;
+    font-family: sans-serif;
 }
 .company-sections h3 {
     color: white;
     font-size: 25px;
     font-weight: 700;
     margin: 14px 0;
-    font-family: 'proxima-nova', sans-serif;
+    font-family: sans-serif;
     text-transform: capitalize;
     position: fixed;
     top: 85%;
@@ -131,10 +131,13 @@ export default {
 .company-sections p {
     margin-top: 20px;
     color: white;
+    font-size: 28px;
     position: fixed;
-    top: 40%;
+    top: 42%;
     left: 50%;
     transform: translate(-50%, -50%);
+    font-family: sans-serif;
+    
 }
 .ct-u-size22 {
     font-size: 22px;
@@ -340,4 +343,3 @@ width: 200px;
     left: 57%;
 
 }
-</style>
