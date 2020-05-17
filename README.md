@@ -1,11 +1,10 @@
 # Plata-2.0
 
-> My Nuxt.js project
+An Ethereum-based DApp on the Ropsten network faciliating the monetary exchange of any digital asset. Written in Vue Js framework and includes user authentification.
 
 ## Build Setup
 
-```bash
-# install dependencies
+# install dependencies in main project folder
 $ npm install
 
 # serve with hot reload at localhost:3000
