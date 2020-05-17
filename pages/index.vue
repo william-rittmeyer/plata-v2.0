@@ -2,34 +2,17 @@
   <div class="container mx-auto text-center py-16 px-6">
 
    <div v-if="$store.state.user">
-
-    <br></br>
-
-   <img src="../assets/placeholder_logo.png" class="front_image">
- 
-
-      <h1 class="title text-white">
-        Plata 2.0
-      </h1>
       <br></br>
-      <h2 class="subtitle">
-        Welcome!!! you are logged in to the home screen
-      </h2>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
 
+      <h1 class="title">
+        Welcome <b><u class="user">{{$store.state.user.email}}!</u></b> you are logged in to the home screen
+      </h1>
 
-      <nuxt-link
-            to="/account"
-            class="button--green "
-          >
-          Login
-          </nuxt-link>
-
-          <nuxt-link
-            to="/about"
-            class="button--grey "
-          >
-          About
-          </nuxt-link>
 
       </div>
 
@@ -87,9 +70,14 @@ export default {
 /* Sample `apply` at-rules with Tailwind CSS
 .container {
   @apply min-h-screen flex justify-center items-center text-center mx-auto;
+  font-family: sans-serif;
 
 }
 */
+
+.front_image {
+  width: 300px;
+}
 
 
 .title {
@@ -108,16 +96,23 @@ export default {
   color: white;
   word-spacing: 5px;
   padding-bottom: 15px;
+  font-family: sans-serif;
+
 
 }
 
 .links {
   padding-top: 15px;
+  font-family: sans-serif;
+  
 }
 
-.front_image {
-  width: 300px;
+.user{
+    font-family: sans-serif;
+
 }
+
+
 
 
 </style>
