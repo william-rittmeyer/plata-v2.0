@@ -1,4 +1,5 @@
- <template>
+<template>
+<body>
     <div class="animation-area" id ="animation-area" style="filter: blur(0px); filter: brightness(1);">  
 
     <ul class="box-area">
@@ -100,8 +101,17 @@
       ></path>
       </svg>
       </nuxt-link>
+      <nuxt-link
+            v-if="$store.state.user"
+            to="/profile"
+            class="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out"
+          >
+            Profile
+          </nuxt-link>
+
 
       <img src="../assets/placeholder_logo.png" class="corner_logo">
+
 
       <h1 class="logo_title">
         Plata 2.0
@@ -120,6 +130,7 @@
     <nuxt/>
   </div>
   </div>
+  </body>
 
 
 </template>
@@ -152,12 +163,15 @@ export default {
 html {
   font-family: sans-serif;
   font-size: 16px;
-  word-spacing: 1px;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  box-sizing: border-box;
+
+}
+.body {
+  font-family: sans-serif;
+}
+
+.container{
+  font-family: sans-serif;
+  
 }
 
 *,
@@ -321,6 +335,7 @@ html {
     bottom: 1px;
     left: 50%;
     transform: translate(-50%, -50%);
+    font-family: sans-serif;
 }
 
 .corner_logo {
@@ -337,6 +352,8 @@ position: absolute;
     left: 7%;
     font-size: 35px;
     color: white;
+    font-family: sans-serif;
+
   
 }
 
