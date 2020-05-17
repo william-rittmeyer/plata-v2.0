@@ -92,7 +92,7 @@ body{
 
 .wrapper{
   position: absolute;
-  top: 40%;
+  top: 45%;
   left: 20%;
   transform: translate(-50%,-50%);
   width: 450px;
