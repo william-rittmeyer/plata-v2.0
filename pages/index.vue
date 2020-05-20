@@ -34,6 +34,7 @@
         An Ethereum-based platform for exchanging digital assets
       </h2>
 
+
       <nuxt-link
             to="/login"
             class="button--green "
@@ -62,7 +63,7 @@ import Logo from '~/components/Logo.vue'
 export default {
   components: {
     Logo
-  }
+  },
   }
 </script>
 
@@ -77,6 +78,10 @@ export default {
 
 .front_image {
   width: 300px;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 
@@ -87,6 +92,10 @@ export default {
   font-size: 50px;
   color: white;
   letter-spacing: 1px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .subtitle {
@@ -97,6 +106,10 @@ export default {
   word-spacing: 5px;
   padding-bottom: 15px;
   font-family: sans-serif;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 
 
 }
