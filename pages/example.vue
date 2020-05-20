@@ -228,36 +228,15 @@
 
 <script>
 export default {
-
-  
-  data() {
-    return {
-      email: '',
-      password: ''
-    }
-  },
-
     fetch({store, redirect}) {
-  if (store.state.user) {
-  return redirect('/')
-  }
-  },
-
-  methods: {
-    async submitform() {
-    try {
-      const response = await this.$axios
-        .post('/api/users', {
-          email: this.email,
-          password: this.password
-        })
-        this.$store.commit('SET_USER', response.data)
-          this.$router.push('/profile')
-    } catch (err) {
-      throw new Error(err)
+    if (
+    !store.state.user || 
+    (store.state.user && store.state.user.
+    isAuthenticated ===false)
+    ) {
+    return redirect('/')
     }
     }
-  }
 }
 </script>
 <style>
