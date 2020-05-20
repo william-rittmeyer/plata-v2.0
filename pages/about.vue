@@ -76,6 +76,17 @@ export default {
     width: 100%;
     z-index: -10;
 }
+
+col-md-12 h1 {
+    margin-bottom: 40px;
+    line-height: 80px;
+    color: white;
+    font-weight: 700 !important;
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 .company-heading h1 {
     margin-bottom: 40px;
     line-height: 80px;
