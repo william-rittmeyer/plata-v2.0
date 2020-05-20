@@ -1,0 +1,9 @@
+DB_HOST=127.0.0.1
+DB_PORT=8889
+DB_USER=root
+DB_PASSWORD=root
+DB_NAME=Plata
+
+
+MAILGUN_API_KEY=e0f706d000bbc6282959fd7adca09c39-0afbfc6c-5bf9caf6
+MAILGUN_DOMAIN=sandbox9140bcda9e464aca823514e9c0dc3e28.mailgun.org
