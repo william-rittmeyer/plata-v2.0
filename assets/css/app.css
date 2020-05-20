@@ -1,0 +1,298 @@
+
+.row h1{
+
+    position: absolute;
+    left: 300px;
+    top:100px;
+
+}
+
+.row p1{
+    position: absolute;
+    left: 300px;
+    top:140px;
+}
+
+.row p2{
+    position: absolute;
+    left: 300px;
+    top:160px;
+}
+
+.col-1{
+
+    
+    height: 500px;
+    width: 1150px;
+    position: absolute;
+    left: 80px;
+    top:200px;
+    background-color: white;
+    opacity: .8;
+    overflow: auto;
+    white-space: nowrap;
+    z-index: 0;
+
+    
+
+}
+
+.table1-header{
+
+    
+    height: 30px;
+    width: 1150px;
+    position: absolute;
+    left: 80px;
+    top:170px;
+    background-color: white;
+    opacity: .82;
+    overflow: auto;
+    white-space: nowrap;
+    font-size: 20px;
+    font-weight: bolder;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+.col-2{
+
+    
+    height: 500px;
+    width: 400px;
+    position: absolute;
+    left: 1350px;
+    top:200px;
+    background-color: white;
+    opacity: .8;
+    overflow: auto;
+    white-space: nowrap;
+    
+
+    
+
+}
+
+.table2-header{
+
+    
+    height: 30px;
+    width: 400px;
+    position: absolute;
+    left: 1350px;
+    top:170px;
+    background-color: white;
+    opacity: .82;
+    overflow: auto;
+    white-space: nowrap;
+    font-size: 20px;
+    font-weight: bolder;
+    text-align: center;
+    z-index: 1;
+
+    
+
+}
+
+.panel-heading{
+    font-weight: 300;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.panel-body{
+    font-size: 16px;
+}
+
+.panel-body:after{
+    
+    content: "";
+  display: table;
+  clear: both
+}
+
+.panel-title{
+    float: left;
+    width: 10%;
+}
+
+.article-price{
+    float: left;
+    width: 15%;
+}
+
+.article-seller{
+
+    float: left;
+    width: 35%;
+
+}
+
+.article-description{
+    float: left;
+    width: 35%;
+
+}
+
+
+.navbar-default {
+    text-align: center;
+    color: white;
+}
+
+
+
+
+.modal{
+    display: none;
+    
+
+}
+
+.modal:target {
+    visibility: visible;
+    opacity: 1;
+  }
+
+.modal-dialog{
+
+    height: 600px;
+    width: 650px;
+    position: absolute;
+    left: 700px;
+    top:200px;
+    background:white;
+    transition: all 5s ease-in-out;
+}
+
+.modal-receipt{
+
+    height: 600px;
+    width: 650px;
+    position: absolute;
+    left: 700px;
+    top:200px;
+    background: white;
+    transition: all 5s ease-in-out;
+}
+
+.modal-submission{
+
+    height: 600px;
+    width: 650px;
+    position: absolute;
+    left: 700px;
+    top:200px;
+    background: white;
+    transition: all 5s ease-in-out;
+}
+
+.modal-submission h1{
+
+    font-size: 20px;
+    position: absolute;
+    top:50px;
+
+}
+
+.modal-loading{
+
+    height: 400px;
+    width: 400px;
+    position: absolute;
+    left: 700px;
+    top:200px;
+    background: white;
+    transition: all 5s ease-in-out;
+
+}
+
+.modal-loading h1{
+
+    font-size: 20px;
+    position: absolute;
+    top:50px;
+
+}
+
+.modal-error{
+
+    height: 400px;
+    width: 400px;
+    position: absolute;
+    left: 700px;
+    top:200px;
+    background: white;
+    transition: all 5s ease-in-out;
+
+}
+
+
+
+.loading-animation{
+
+    
+    position: absolute;
+    left: 160px;
+    top:200px;
+
+
+
+}
+
+.modal .close{
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+  }
+
+.modal-close{
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+  }
+
+
+.collapse {
+    list-style-type: none;
+    font-size: 20px;
+}
+
+
+
+.uga-engr{
+    width: 300px;
+    height: auto;
+    position: fixed;
+    left: 900px;;
+    top:730px;
+}
+
+.front-link {
+    background-color: black;
+  color: white;
+  padding: 50px 100px;
+    color: #ffffff;
+    position: absolute;
+    top: 10px;
+    left: 60px;
+    z-index: 50;
+}
+
