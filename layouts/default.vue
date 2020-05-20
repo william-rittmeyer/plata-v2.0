@@ -75,12 +75,19 @@
             Logout
           </a>
 
-          <nuxt-account
+          <div
             class="ml-8 inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium text-gray-1000"
             id = "account"
           >
-            Connected Account: 0x81202D123EA0576f600d1cd0CeC44E4F8f5C59e6
-          </nuxt-account>
+            Account not connected:
+          </div>
+
+          <div
+            class="ml-8 inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium text-gray-1000"
+            id = "accountBalance"
+          >
+            N/A
+          </div>
 
 
         </div>
