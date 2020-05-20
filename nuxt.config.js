@@ -14,7 +14,32 @@ module.exports = {
         content: process.env.npm_package_description || ''
       }
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+    link: [{ rel: 'icon', type: 'image/x-icon', href: 'favicon.ico' }],
+
+    script: [
+      { 
+        src: 'js/jquery.min.js',
+      }, 
+      { 
+        src: '/js/truffle-contract.js',
+      },
+      { 
+        src: '/js/ipfs-min.min.js',
+      },
+      { 
+        src: '/js/bootstrap.min.js',
+      },
+      { 
+        src: '/js/web3.min.js',
+      },
+      { 
+        src: '/js/app.js',
+      },
+      { 
+        src: '/js/bundle.js',
+      },
+             
+    ],
   },
   /*
    ** Customize the progress-bar color
@@ -23,7 +48,7 @@ module.exports = {
   /*
    ** Global CSS
    */
-  css: [],
+  css: ['~/assets/css/app.css'],
   /*
    ** Plugins to load before mounting the App
    */
@@ -37,7 +62,11 @@ module.exports = {
     // Doc: https://github.com/nuxt-community/stylelint-module
     '@nuxtjs/stylelint-module',
     // Doc: https://github.com/nuxt-community/nuxt-tailwindcss
-    '@nuxtjs/tailwindcss'
+    '@nuxtjs/tailwindcss',
+
+    '@nuxtjs/vuetify',
+    
+    ['@nuxtjs/vuetify', { /* module options */ }]
   ],
   /*
    ** Nuxt.js modules
