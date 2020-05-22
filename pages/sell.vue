@@ -5,7 +5,7 @@
   <div class="table1" id="article-list">
       <div class="panel-heading">
         <br/>
-      <pre> Item           Description                      Price(ETH)       Seller</pre>
+      <pre> Item           Description                   Price(ETH)      Seller</pre>
       <br/>
       </div>
         <div id="articlesRow" class="row">
@@ -65,8 +65,7 @@
                 <div class="article-description" style ="display: inline-block;"></div>
                 <div class="article-price" style ="display: inline-block;"></div>
                 <div class="article-seller" style ="display: inline-block;"></div>
-                <button type="article-button" style ="display: inline-block;" class="btn btn-primary btn-success btn-buy" onclick="App.buyArticle(event); return false;">Buy</button>
-                <br/>
+                <button type="article-button" style ="display: inline-block;" class="article-button" onclick="App.buyArticle(event); return false;">Buy</button>
             </div>
           </div>
         </div>
@@ -183,18 +182,17 @@
 <script>
 export default {
 
-	fetch({store, redirect}) {
-	if (
-	!store.state.user || 
-	(store.state.user && store.state.user.
-	isAuthenticated ===false)
-	) {
-	return redirect('/')
-	}
-	else {
-	App.reloadArticlesPage()
-	}
-	},
+  fetch({store, redirect}) {
+  if (
+  !store.state.user || 
+  (store.state.user && store.state.user.
+  isAuthenticated ===false)
+  ) {
+  return redirect('/')
+  }
+  else {
+  }
+  },
 
 }
 
@@ -221,15 +219,15 @@ export default {
 }
 
 .sell{
-	position: absolute;
-	top:50%;
-	left: 37%;
-	font-family: sans-serif;
-  	display: block;
-  	font-weight: 300;
-  	font-size: 50px;
-  	color: white;
-  	letter-spacing: 1px;
+  position: absolute;
+  top:50%;
+  left: 37%;
+  font-family: sans-serif;
+    display: block;
+    font-weight: 300;
+    font-size: 50px;
+    color: white;
+    letter-spacing: 1px;
 }
 
 
@@ -243,15 +241,16 @@ export default {
 
 .row p1{
     position: absolute;
-    left: 300px;
     top:140px;
 }
 
 .row p2{
     position: absolute;
-    left: 300px;
     top:160px;
 }
+
+
+
 
 .col-1{
 
@@ -353,31 +352,39 @@ export default {
 }
 
 .panel-title{
-    float: left;
-    width: 10%;
-}
-
-.article-price{
-    float: left;
-    width: 30%;
-}
-
-.article-seller{
-
-    float: left;
-    width: 50%;
-
+    position: absolute;
+    left: 10px;
+    font-size: 10px;
 }
 
 .article-description{
-    float: left;
-    width: 35%;
+    position: absolute;
+    left: 190px;
+    font-size: 10px;
 
 }
 
+.article-price{
+    width: 10%;
+    position: absolute;
+    left: 550px;
+    font-size: 10px;
+}
+
+.article-seller{
+    width: 30%;
+    position: absolute;
+    left: 750px;
+    font-size: 10px;
+
+}
+
+
+
 .article-button{
-    float: left;
-    width: 75%;
+    position: absolute;
+    left: 1050px;
+    font-size: 10px;
 
 }
 
@@ -538,3 +545,5 @@ export default {
 
 
 </style>
+
+
