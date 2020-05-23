@@ -330,9 +330,9 @@ App = {
 
         // Retrieve and fill the article template
         var articleTemplate = $('#articleTemplate');
-        articleTemplate.find('.panel-title').text("   " + name);
-        articleTemplate.find('.article-description').text("      " + description);
-        articleTemplate.find('.article-price').text("      " + etherPrice);
+        articleTemplate.find('.panel-title').text(name);
+        articleTemplate.find('.article-description').text(description);
+        articleTemplate.find('.article-price').text(etherPrice);
         articleTemplate.find('.btn-buy').attr('data-id', id);
         articleTemplate.find('.btn-buy').attr('data-value', etherPrice);
 
@@ -347,8 +347,6 @@ App = {
 
         // add this new article
         articlesRow.append(articleTemplate.html());
-        console.log(articleTemplate);
-        console.log(articlesRow);
 
     },
 
