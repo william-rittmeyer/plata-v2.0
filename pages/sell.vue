@@ -5,7 +5,7 @@
   <div class="table1" id="article-list">
       <div class="panel-heading">
         <br/>
-      <pre> Item           Description                   Price(ETH)      Seller</pre>
+      <pre> Item           Description                      Price(ETH)       Seller</pre>
       <br/>
       </div>
         <div id="articlesRow" class="row">
@@ -65,7 +65,8 @@
                 <div class="article-description" style ="display: inline-block;"></div>
                 <div class="article-price" style ="display: inline-block;"></div>
                 <div class="article-seller" style ="display: inline-block;"></div>
-                <button type="article-button" style ="display: inline-block;" class="article-button" onclick="App.buyArticle(event); return false;">Buy</button>
+                <button type="article-button" style ="display: inline-block;" class="article-button btn btn-primary btn-success btn-buy" onclick="App.buyArticle(event); return false;">Buy</button>
+                <br/>
             </div>
           </div>
         </div>
@@ -181,19 +182,14 @@
 
 <script>
 export default {
-
-  fetch({store, redirect}) {
-  if (
-  !store.state.user || 
-  (store.state.user && store.state.user.
-  isAuthenticated ===false)
-  ) {
-  return redirect('/')
-  }
-  else {
-  }
-  },
-
+fetch({store, redirect}) {
+	if ((!store.state.user) || (!store.state.user)) {
+	App.reloadArticlesPage()
+	}
+	else {
+	App.reloadArticlesPage()
+	}
+	},
 }
 
 </script>
