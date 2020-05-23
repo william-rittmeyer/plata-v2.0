@@ -1,8 +1,7 @@
 <template>
-<body>
-    <div class="animation-area" id ="animation-area" style="filter: blur(0px); filter: brightness(1);">  
-
-    <ul class="box-area">
+  <body>
+    <div class="animation-area" id ="animation-area" style="filter: blur(0px); filter: brightness(1);">
+      <ul class="box-area">
         <li></li>
         <li></li>
         <li></li>
@@ -14,129 +13,124 @@
         <li></li>
       </ul>  
 
-  <div>
-  <nav class="bg-white shadow-sm">
-  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex justify-between items-center h-16">
-      <div class="flex">
-        <div class="hidden sm:ml-6 sm:flex">
+      <div>
+        <nav class="bg-white shadow-sm">
+          <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+              <div class="flex">
+                <div class="hidden sm:ml-6 sm:flex">
 
-          <nuxt-link
-            to="/"
-            class="ml-8 inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out"
-          >
-            Home
-          </nuxt-link>
-          
-          <nuxt-link
-            v-if="$store.state.user"
-            to="/sell"
-            class="ml-8 inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out"
-          >
-          File Exchange
-          </nuxt-link>
+                  <nuxt-link
+                    to="/"
+                    class="ml-8 inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out"
+                  >
+                    Home
+                  </nuxt-link>
+                  
+                  <nuxt-link
+                    to="/sell"
+                    class="ml-8 inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out"
+                  >
+                  File Exchange
+                  </nuxt-link>
 
-          <nuxt-link
-            v-if="$store.state.user"
-            to="/database"
-            class="ml-8 inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out"
-          >
-          Database Access
-          </nuxt-link>
-          
-          <nuxt-link
-            to="/about"
-            class="ml-8 inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out"
-          >
-          About
-          </nuxt-link>
-          
-          <nuxt-link
-            v-if="!$store.state.user"
-            to="/register"
-            class="ml-8 inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out"
-          >
-            Register
-          </nuxt-link>
+                  <nuxt-link
+                    v-if="$store.state.user"
+                    to="/database"
+                    class="ml-8 inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out"
+                  >
+                  Database Access
+                  </nuxt-link>
+                  
+                  <nuxt-link
+                    to="/about"
+                    class="ml-8 inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out"
+                  >
+                  About
+                  </nuxt-link>
+                  
+                  <nuxt-link
+                    v-if="!$store.state.user"
+                    to="/register"
+                    class="ml-8 inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out"
+                  >
+                    Register
+                  </nuxt-link>
 
-          <nuxt-link
-            v-if="!$store.state.user"
-            to="/login"
-            class="ml-8 inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out"
-          >
-            Login
-          </nuxt-link>
-          
-          <a
-            v-if="$store.state.user"
-            @click="logout"
-            class="ml-8 inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out"
-          >
-            Logout
-          </a>
+                  <nuxt-link
+                    v-if="!$store.state.user"
+                    to="/login"
+                    class="ml-8 inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out"
+                  >
+                    Login
+                  </nuxt-link>
+                  
+                  <a
+                    v-if="$store.state.user"
+                    @click="logout"
+                    class="ml-8 inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out"
+                  >
+                    Logout
+                  </a>
 
-          <div
-            class="ml-8 inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium text-gray-1000"
-            id = "account"
-          >
-            Account not connected:
+                  <div
+                    class="account ml-8 inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium text-gray-1000"
+                    id = "account"
+                  >
+                    Account not connected:
+                  </div>
+
+                  <div
+                    class="account ml-8 inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium text-gray-1000"
+                    id = "accountBalance"
+                  >
+                    N/A
+                  </div>
+                </div>
+              </div>
+
+              <nuxt-link
+                to="/profile" 
+                v-if="$store.state.user"
+              >
+                <svg
+                  fill="currentColor" 
+                  viewBox="0 0 20 20" 
+                  class="mt-1 w-8 h-8 text-gray-500"
+                >
+                  <path 
+                    fill-rule="evenodd"
+                    d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z" clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </nuxt-link>
+
+              <nuxt-link
+
+                v-if="$store.state.user"
+                to="/profile"
+                class="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out"
+              >Profile
+              </nuxt-link>
+              <img src="../assets/placeholder_logo.png" class="corner_logo">
+
+              <h1 class="logo_title">Plata 2.0</h1>
+
+
+            </div>
           </div>
+        </nav>
 
-          <div
-            class="ml-8 inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium text-gray-1000"
-            id = "accountBalance"
-          >
-            N/A
-          </div>
+        <div>
 
+          <p class="text-bottom" credit><a href="https://sensorweb.engr.uga.edu/">SensorWeb Research Laboratory</a> - &copy; 2020 - <a href="https://sensorweb.engr.uga.edu/index.php/people/">William Rittmeyer</a> and <a href="https://sensorweb.engr.uga.edu/index.php/people/">Soumya Pal</a></p>
 
         </div>
+
+        <nuxt/>
+        
       </div>
-
-      <nuxt-link
-      to="/profile" v-if="$store.state.user"
-      >
-
-      <svg
-        fill="currentColor" 
-        viewBox="0 0 20 20" 
-        class="mt-1 w-8 h-8 text-gray-500"
-      >
-      <path 
-        fill-rule="evenodd"
-        d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z" clip-rule="evenodd"
-      ></path>
-      </svg>
-      </nuxt-link>
-      <nuxt-link
-            v-if="$store.state.user"
-            to="/profile"
-            class="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out"
-          >
-            Profile
-          </nuxt-link>
-
-
-      <img src="../assets/placeholder_logo.png" class="corner_logo">
-
-
-      <h1 class="logo_title">
-        Plata 2.0
-      </h1>
-
-
     </div>
-  </div>
-</nav>
-
-  <div>
-
-            <p class="text-bottom" credit><a href="https://sensorweb.engr.uga.edu/">SensorWeb Research Laboratory</a> - &copy; 2020 - <a href="https://sensorweb.engr.uga.edu/index.php/people/">William Rittmeyer</a> and <a href="https://sensorweb.engr.uga.edu/index.php/people/">Soumya Pal</a></p>
-          </div>
-
-    <nuxt/>
-  </div>
-  </div>
   </body>
 
 
@@ -169,18 +163,11 @@ export default {
 </script>
 
 <style>
-html {
+.body {
   font-family: sans-serif;
   font-size: 16px;
 
-}
-.body {
-  font-family: sans-serif;
-}
 
-.container{
-  font-family: sans-serif;
-  
 }
 
 *,
@@ -188,6 +175,11 @@ html {
 *:after {
   box-sizing: border-box;
   margin: 0;
+}
+
+.account{
+  font-family: sans-serif;
+
 }
 
 .button--green {
@@ -237,7 +229,6 @@ html {
     z-index: -5;
 
 }
-
 
 .box-area{
     position: absolute;
