@@ -1,27 +1,24 @@
 <template>
 
+  <div class="login-box">
+    <h2>Login</h2>
+    <form @submit.prevent="submitform">
+      <div class="user-box">
+        <input type="text" name="" required="" id="email" v-model="email">
+        <label>Email</label>
+      </div>
+      <div class="user-box">
+        <input type="password" name="" required="" id="password" v-model="password">
+        <label>Password</label>
+      </div>
 
+      <button >Log in</button>
+       <nuxt-link
+        to="/reset-password"
+        >Forgot password?</nuxt-link>
 
-<div class="login-box">
-  <h2>Login</h2>
-  <form @submit.prevent="submitform">
-    <div class="user-box">
-      <input type="text" name="" required="" id="email" v-model="email">
-      <label>Email</label>
-    </div>
-    <div class="user-box">
-      <input type="password" name="" required="" id="password" v-model="password">
-      <label>Password</label>
-    </div>
-
-    <button class= "text-sm"
-            >
-              Log in
-    </button>
-     <nuxt-link class= "text-sm" to="/reset-password"
-          >Forgot password?</nuxt-link>
-  </form>
-</div>
+    </form>
+  </div>
 
          
   
@@ -230,10 +227,5 @@ body {
   animation: btn-anim4 1s linear infinite;
   animation-delay: .75s
 }
-
-
-
-
-
 
 </style>
