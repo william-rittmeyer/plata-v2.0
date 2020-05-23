@@ -1,26 +1,26 @@
 <template>
 
   <div class="login-box">
-  <h2>Register an Account</h2>
-  <form @submit.prevent="submitform">
-    <div class="user-box">
-      <input type="text" name="" required="" id="email" v-model="email">
-      <label>Email</label>
-    </div>
-    <div class="user-box">
-      <input type="password" name="" required="" id="password" v-model="password">
-      <label>Password</label>
-    </div>
+    <h2>Login</h2>
+    <form @submit.prevent="submitform">
+      <div class="user-box">
+        <input type="text" name="" required="" id="email" v-model="email">
+        <label>Email</label>
+      </div>
+      <div class="user-box">
+        <input type="password" name="" required="" id="password" v-model="password">
+        <label>Password</label>
+      </div>
 
-    <button class= "text-sm"
-            >
-              Register
-    </button>
-<nuxt-link class= "text-sm" to="/login"
-          >Already have an Account?</nuxt-link>
+      <button >Log in</button>
+       <nuxt-link
+        to="/reset-password"
+        >Forgot password?</nuxt-link>
 
-  </form>
-</div>
+    </form>
+  </div>
+
+         
   
 </template>
 
@@ -35,7 +35,7 @@ export default {
     }
   },
 
-    fetch({store, redirect}) {
+  fetch({store, redirect}) {
   if (store.state.user) {
   return redirect('/')
   }
@@ -60,7 +60,6 @@ export default {
 </script>
 
 <style lang="css">
-
 
 html {
   height: 100%;
@@ -171,7 +170,7 @@ body {
   box-shadow: 0 0 5px #03e9f4,
               0 0 25px #03e9f4,
               0 0 0px #03e9f4,
-              0 0 0px #03e9f4;
+              0 0 0px red;
 }
 
 .login-box a span {
@@ -228,12 +227,5 @@ body {
   animation: btn-anim4 1s linear infinite;
   animation-delay: .75s
 }
-
-
-
-
-
-
-
 
 </style>
