@@ -1,134 +1,76 @@
 <template>
 
-<div>
+    <div class="about">
+        <div class="company">
+              <h1>About Plata</h1>
+              <h2>IPFS - Ethereum - Orbitdb</h2>
 
-<div class="ct-pageWrapper" id="ct-js-wrapper">
-  <section class="company-heading intro-type" id="parallax-one">
-    <div class="container">
-      <div class="row product-title-info">
-        <div class="col-md-12">
-          <h1>About Plata</h1>
+              <div class="red-border"></div>
+
+              <p>Plata is an Ethereum-based marketplace platform that facilitates the 
+              exchange of digital assets as well as database access. Files uploaded to Plata are encrypted and stored on a decentralized 
+              cloud provided by IPFS. Through the use of smart contracts provided by the Ethereum blockchain, users are able to securely
+              buy and sell digital assets. Plata also offers a feature of buying and selling database access. Databases are hosted on 
+              orbitdb which is a database engine on IPFS which make Plata very useful for IoT.</p>
+              
+              <img src="../assets/IPFS.png" class="ipfs_logo logos">
+              <img src="../assets/ethereum.png" class="ethereum_logo logos">
+              <img src="../assets/orbitdb.png" class="orbitdb_logo logos">
+
         </div>
-      </div>
     </div>
-    <div class="parallax" id="parallax-cta" style="background-image:url(https://www.solodev.com/assets/hero/hero.jpg);"></div>
-  </section>
-
-  <section class="story-section company-sections ct-u-paddingBoth100 paddingBothHalf noTopMobilePadding" id="section">
-    <div class="container text-center">
-      <h2></h2>
-      <h3>IPFS - Ethereum - Orbitdb</h3>
-      <div class="col-md-8 col-md-offset-2">
-        <div class="red-border"></div>
-        <p class="ct-u-size22 ct-u-fontWeight300 marginTop40">Plata is an Ethereum-based marketplace platform that facilitates the 
-        exchange of digital assets as well as database access. Files uploaded to Plata are encrypted and stored on a decentralized 
-        cloud provided by IPFS. Through the use of smart contracts provided by the Ethereum blockchain, users are able to securely
-         buy and sell digital assets. Plata also offers a feature of buying and selling database access. Databases are hosted on 
-         orbitdb which is a database engine on IPFS which make Plata very useful for IoT.</p>
-        <img src="../assets/IPFS.png" class="ipfs_logo logos">
-        <img src="../assets/ethereum.png" class="ethereum_logo logos">
-        <img src="../assets/orbitdb.png" class="orbitdb_logo logos">
-      </div>
-    </div>
-  </section>
-
-      </div>
-    </div>
-  </div>
-</div>
-</div>
-
-
 </template>
 
 <script>
-export default {
-
-}
 </script>
 
 
-
 <style>
-.separator-type, .title-type, .intro-type, .content-type .intro-type p {
-    position: relative;
-}
-.intro-type .container {
-    padding: 107px 0px 102px 0px !important;
-}
-#product-header-section, .intro-type .container {
-    padding: 68px 15px 72px !important;
-}
-@media (min-width: 1630px)
-.container {
-    width: 1630px;
-}
-.parallax {
-    background-attachment: inherit !important;
-}
-.parallax {
-    background-attachment: inherit !important;
-    background-repeat: repeat;
-    background-size: cover;
-    position: absolute;
-    top: 0px;
-    bottom: 0px;
-    width: 100%;
-    z-index: -10;
+
+.company {
+    color: white;
 }
 
-col-md-12 h1 {
-    margin-bottom: 40px;
-    line-height: 80px;
-    color: white;
-    font-weight: 700 !important;
-    position: fixed;
-    top: 20%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-.company-heading h1 {
-    margin-bottom: 40px;
-    line-height: 80px;
-    color: white;
-    font-weight: 700 !important;
-    position: fixed;
-    top: 20%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-.seo-header, .product-header, .intro-type .container h1.white, .company-heading h1 {
-    font-family: 'Raleway', sans-serif;
-    font-weight: 100 !important;
-    text-transform: capitalize;
-    font-size: 65px;
-    margin-bottom: 20px;
-}
-.company-sections h2, .careers-sections h2, .perks-section h2 {
-    font-weight: 800;
-    color: white;
-    font-size: 50px;
-    position: fixed;
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.company h1{
 
-}
-.company-sections h2, .company-sections h3, .careers-sections h2, .perks-section h2 {
     font-family: sans-serif;
+    margin-bottom: 40px;
+    line-height: 80px;
+    font-size: 65px;
+    font-weight: 100;
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
-.company-sections h3 {
-    color: white;
+
+.company h2{
+
+    font-family: sans-serif;
+
+    margin: 14px 0;
     font-size: 25px;
     font-weight: 700;
-    margin: 14px 0;
-    font-family: sans-serif;
-    text-transform: capitalize;
     position: fixed;
     top: 85%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+.company p{
+
+    font-family: sans-serif;
+    text-align: center;
+    margin-top: 40px; 
+    margin-top: 20px;
+    font-size: 28px;
+    font-weight: 300;
+    position: fixed;
+    top: 42%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+}
+
 .red-border {
     width: 50%;
     border-bottom: 1px solid white;
@@ -139,219 +81,26 @@ col-md-12 h1 {
     left: 50%;
     transform: translate(-50%, -50%);
 }
-.company-sections p {
-    margin-top: 20px;
-    color: white;
-    font-size: 28px;
-    position: fixed;
-    top: 42%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-family: sans-serif;
-    
-}
-.ct-u-size22 {
-    font-size: 22px;
-}
-.ct-u-fontWeight300 {
-    font-weight: 300;
-}
-.marginTop40 {
-    margin-top: 40px !important;
-}
-.ct-u-paddingBoth100 {
-    padding: 100px 15px;
-}
-.culture-section {
-    background: white top no-repeat;
-     background-color: #095c87;
-}
-.company-sections, .careers-sections, .left-headquarter-section-img, .right-headquarter-section-img {
-    text-align: center;
 
-}
-.ct-u-paddingBoth100 {
-    padding: 100px 15px;
-}
-.company-sections h2, .careers-sections h2, .perks-section h2 {
-    font-weight: 800;
-     color: white;
-    font-size: 50px;
-}
-.company-sections h2, .company-sections h3, .careers-sections h2, .perks-section h2 {
-    font-family: 'proxima-nova', sans-serif;
-     color: white;
-
-}
-.slick-slider {
-    margin-bottom: 0;
-}
-.slick-slider {
-    position: relative;
-    display: block;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    -webkit-touch-callout: none;
-    -khtml-user-select: none;
-    -ms-touch-action: pan-y;
-    touch-action: pan-y;
-    -webkit-tap-highlight-color: transparent;
-}
-.slick-slider .slick-track, .slick-slider .slick-list {
-    -webkit-transform: translate3d(0, 0, 0);
-    -moz-transform: translate3d(0, 0, 0);
-    -ms-transform: translate3d(0, 0, 0);
-    -o-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-}
-.slick-list {
-    position: relative;
-    display: block;
-    overflow: hidden;
-    margin: 0;
-    padding: 0;
-}
-.slick-track {
-    position: relative;
-    top: 0;
-    left: 0;
-    display: block;
-}
-.slider .item {
-    overflow: hidden;
-}
-.slick-slide {
-    display: none;
-    float: left;
-    height: 100%;
-    min-height: 1px;
-}
-.logos {
-    margin-right: -5px;
-    margin-left: -5px;
-}
-ul.logos li {
-    cursor: pointer;
-}
-.logos > li {
-    float: left;
-    width: 16.66666%;
-    padding: 5px;
-}
-.logos .logos-inner {
-    position: relative;
-}
-.slick-slide img {
-    display: inline-block;
-}
-.logo-image {
-    position: relative;
-    width: 100%;
-}
-ul.logos li {
-    cursor: pointer;
-}
-.logos > li {
-    float: left;
-    width: 16.66666%;
-    padding: 5px;
-}
-.logos .logos-inner {
-    position: relative;
-}
-.slick-slide img {
-    display: inline-block;
-}
-img {
-    display: inline-block;
-    max-width: 100%;
-    vertical-align: middle;
-}
-.fa {
-  font-size: 42px;
-}
-.btn-solodev-red-reversed {
-    background-color: #fff;
-    color: #d2282e;
-    -webkit-transition: all 0.3s ease;
-    transition: all 0.3s ease;
-    padding: 12px 35px;
-}
-.btn, .btn-blk {
-    font-size: 18px !Important;
-}
-a:hover, a:focus {
-    text-decoration: none;
-}
-.ct-u-size19 {
- margin-top: 40px; 
-}
-a:hover {
-    color: #000;
-}
-section.clients-home .clients-logos .client-logos-repeater {
-    height: 260px;
-    border-right: 1px solid #ccc;
-    border-bottom: 1px solid #ccc;
-    cursor: pointer;
-}
-
-section.clients-home .clients-logos .client-logos-repeater img {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-    left: 0;
-    right: 0;
-}
-.logo-title {
-    position: absolute;
-    display: none;
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    height: 100%;
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 16px;
-    text-transform: uppercase;
-    color: #FFF;
-    background-color: #0079c2;
-}
-.ct-u-paddingBottom100 {
-  margin-top: 40px;
-}
-.culture-section {
-  background-size: cover;
-  color: #fff;
-}
 
 .logos {
-position: absolute;
+    position: absolute;
     top: 70%;
-
 }
-
 
 .ipfs_logo {
-width: 100px;
+    width: 100px;
     left: 38%;
 
 }
 
 .ethereum_logo {
-width: 60px;
+    width: 60px;
     left: 49%;
-
 }
 
 .orbitdb_logo {
-width: 200px;
+    width: 200px;
     left: 57%;
-
 }
 </style>
