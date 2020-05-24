@@ -82,7 +82,7 @@
 
     <div class="modal " id="sellArticle" role="dialog">
       <div class="modal-dialog">
-        <button type="button" onclick="App.unblurBackground();" class="close" data-dismiss="modal">&times;</button>
+        <button type="button" onclick="App.unblurBackground(); App.resetModal();" class="close" data-dismiss="modal">&times;</button>
 
         <form>
 
@@ -108,14 +108,29 @@
           </div>
           
           <label type="text" id="hashvalue" hidden="hidden"></label>
-          <input type ="file" id="input" onchange='uploadFile();'/>
-          <p id="ipfslinktitle"></p>
-          <p id="ipfslink"><a href=''></a></p>
+          <input type ="file" id="input" class="filename" onchange='uploadFile();'/>
+          <p id="ipfslinktitle" hidden = "hidden"></p>
+          <p id="ipfslink" hidden = "hidden"><a href=''></a></p>
+          
+          <div id="submission-load" class = "loading-animation2" hidden="true">
+          <h1>Uploading file..</h1>
+          <div class="sk-grid">
+            <div class="sk-grid-cube"></div>
+            <div class="sk-grid-cube"></div>
+            <div class="sk-grid-cube"></div>
+            <div class="sk-grid-cube"></div>
+            <div class="sk-grid-cube"></div>
+            <div class="sk-grid-cube"></div>
+            <div class="sk-grid-cube"></div>
+            <div class="sk-grid-cube"></div>
+            <div class="sk-grid-cube"></div>
+          </div>
+        </div>
 
 
           <div class="modal-footer">
             <button type="button" class="btn btn-primary btn-success" data-dismiss="modal" onclick="App.sellArticle(); submitFile(); return false;">Submit</button>
-            <button type="button" class="btn" data-dismiss="modal" onclick="App.unblurBackground();" >Close</button>
+
           </div>
 
         </form>
@@ -148,8 +163,9 @@
 
     <!-- SUBMISSION COMPLETE MODAL -->
 
-  <div class="modal-submission modal-dialog" id ="modal-submission" hidden="true">
+  <div class="modal-submission modal-dialog" id ="modal-submission" hidden="false">
     <div id= "modal-sale" >
+    <br/>
       <h1> Your file has successfully been put up for sale</h1>
           <button type="button" class="modal-close" onclick="App.CloseSubmission();">&times;</button>
     </div>
@@ -163,7 +179,7 @@
         <br/>
         <br/>
         <br/>
-      <a href="somelink.com"><button class="download-button">Download Link</button></a>
+      <a id="readlink" href="somelink.com"><button class="download-button">Download Link</button></a>
       <button type="button" class="modal-close" onclick="App.CloseReceipt();">&times;</button>
     </div>
   </div>
@@ -178,6 +194,7 @@
 
   </section>
 </template>
+
 
 <script>
 export default {
@@ -491,12 +508,34 @@ fetch({store, redirect}) {
 
 }
 
+
+.loading-animation2{
+
+    position: absolute;
+    left: 225px;
+    top: 330px;
+    --sk-size:30px;
+
+}
+
+.loading-animation2 h1{
+
+    color: white;
+
+}
+
+.filename{
+  color: white;
+}
+
 .modal .close{
     position: absolute;
     top: 20px;
     right: 30px;
     transition: all 200ms;
     font-size: 30px;
+    width: 45px;
+    height: 45px;
     font-weight: bold;
     text-decoration: none;
     color: #333;
@@ -504,10 +543,12 @@ fetch({store, redirect}) {
 
 .modal-close{
     position: absolute;
-    top: 10px;
-    right: 15px;
+    top: 20px;
+    right: 30px;
     transition: all 200ms;
     font-size: 30px;
+    width: 45px;
+    height: 45px;
     font-weight: bold;
     text-decoration: none;
     color: #333;
