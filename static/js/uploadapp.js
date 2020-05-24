@@ -4,6 +4,7 @@ const ipfs = new IPFS({host: 'ipfs.infura.io', port: 5001, protocol: 'https'});
 
 
 uploadFile = () => {
+  $('#submission-load').attr('hidden', false);
   const file = document.getElementById('input').files[0];
   let reader = new window.FileReader();
   reader.readAsArrayBuffer(file);
@@ -22,6 +23,7 @@ uploadFile = () => {
       
       $('#hashvalue').text(hash);
       $('#ipfslinktitle').text('Your IPFS Link');
+      $('#submission-load').attr('hidden', true);
       $('#ipfslink').text('https://ipfs.infura.io/ipfs/' + hash);
 
 
