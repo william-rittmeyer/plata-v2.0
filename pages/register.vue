@@ -1,7 +1,7 @@
 <template>
 
   <div class="login-box">
-    <h2>Login</h2>
+    <h2>Register an Account</h2>
     <form @submit.prevent="submitform">
       <div class="user-box">
         <input type="text" name="" required="" id="email" v-model="email">
@@ -12,16 +12,13 @@
         <label>Password</label>
       </div>
 
-      <button >Log in</button>
-       <nuxt-link
-        to="/reset-password"
-        >Forgot password?</nuxt-link>
+      <button>Register</button>
+
+      <nuxt-link to="/login"
+      >Already have an Account?</nuxt-link>
 
     </form>
   </div>
-
-         
-  
 </template>
 
 <script>
@@ -35,7 +32,7 @@ export default {
     }
   },
 
-  fetch({store, redirect}) {
+    fetch({store, redirect}) {
   if (store.state.user) {
   return redirect('/')
   }
@@ -61,6 +58,7 @@ export default {
 
 <style lang="css">
 
+
 html {
   height: 100%;
 }
@@ -78,7 +76,7 @@ body {
   width: 400px;
   padding: 40px;
   transform: translate(-50%, -50%);
-  background: rgba(0,0,0,.5);
+  background: rgba(0,0,0,.6);
   box-sizing: border-box;
   box-shadow: 0 15px 25px rgba(0,0,0,.6);
   border-radius: 10px;
@@ -170,7 +168,7 @@ body {
   box-shadow: 0 0 5px #03e9f4,
               0 0 25px #03e9f4,
               0 0 0px #03e9f4,
-              0 0 0px red;
+              0 0 0px #03e9f4;
 }
 
 .login-box a span {
@@ -227,5 +225,6 @@ body {
   animation: btn-anim4 1s linear infinite;
   animation-delay: .75s
 }
+
 
 </style>
