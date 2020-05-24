@@ -198,7 +198,7 @@ App = {
                     console.log('https://ipfs.infura.io/ipfs/' + event.returnValues._hashvalue);
                     console.log(event.returnValues._name);
                     console.log(event.returnValues._seller);
-                    $('#purchaselink').text('https://ipfs.infura.io/ipfs/' + event.returnValues._hashvalue);
+                  //  $('#purchaselink').text('https://ipfs.infura.io/ipfs/' + event.returnValues._hashvalue);
                     var a = document.querySelector('a[href="somelink.com"]');
                     a.setAttribute('href', 'https://ipfs.infura.io/ipfs/' + event.returnValues._hashvalue)
                     $('#modal-loading').attr('hidden', false);
@@ -388,14 +388,15 @@ App = {
     },
 
     blurBackground: async () => {
-        var background = document.getElementById("animation-area");
-        background.setAttribute("style", "filter: brightness(.4);");
+       // var background = document.getElementById("animation-area");
+       // background.setAttribute("style", "filter: brightness(.4);");
     },
 
     unblurBackground: async () => {
-        var background = document.getElementById("animation-area");
-        background.setAttribute("style", "filter: brightness(1);");
+       // var background = document.getElementById("animation-area");
+       // background.setAttribute("style", "filter: brightness(1);");
     },
+
     
 };
 
