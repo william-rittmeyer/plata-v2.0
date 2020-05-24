@@ -78,7 +78,7 @@ body {
   width: 400px;
   padding: 40px;
   transform: translate(-50%, -50%);
-  background: rgba(0,0,0,.5);
+  background: rgba(0,0,0,.6);
   box-sizing: border-box;
   box-shadow: 0 15px 25px rgba(0,0,0,.6);
   border-radius: 10px;
@@ -170,7 +170,7 @@ body {
   box-shadow: 0 0 5px #03e9f4,
               0 0 25px #03e9f4,
               0 0 0px #03e9f4,
-              0 0 0px red;
+              0 0 0px #03e9f4;
 }
 
 .login-box a span {
@@ -229,3 +229,4 @@ body {
 }
 
 </style>
+
