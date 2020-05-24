@@ -186,10 +186,12 @@ const ipfs = new IPFS({host: 'ipfs.infura.io', port: 5001, protocol: 'https'});
 
 
 uploadFile = () => {
+  $('#submission-load').attr('hidden', false);
   const file = document.getElementById('input').files[0];
   let reader = new window.FileReader();
   reader.readAsArrayBuffer(file);
   reader.onloadend = () => convertToBuffer(reader);
+  
 
   convertToBuffer = async(reader) => {
     //file is converted to a buffer to prepare for uploading to IPFS
@@ -201,15 +203,11 @@ uploadFile = () => {
       if (err) {
           return console.log(err)
       }
-      console.log(1);
+
       $('#hashvalue').text(hash);
-      console.log(2);
       $('#ipfslinktitle').text('Your IPFS Link');
-      console.log(3);
+      $('#submission-load').attr('hidden', true);
       $('#ipfslink').text('https://ipfs.infura.io/ipfs/' + hash);
-      console.log(4);
-     
-      console.log(5);
 
 
       
