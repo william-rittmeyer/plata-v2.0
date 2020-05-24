@@ -199,6 +199,8 @@ App = {
                     console.log(event.returnValues._name);
                     console.log(event.returnValues._seller);
                     $('#purchaselink').text('https://ipfs.infura.io/ipfs/' + event.returnValues._hashvalue);
+                    var a = document.querySelector('a[href="somelink.com"]');
+                    a.setAttribute('href', 'https://ipfs.infura.io/ipfs/' + event.returnValues._hashvalue)
                     $('#modal-loading').attr('hidden', false);
                     App.blurBackground();
 
