@@ -18,7 +18,7 @@
           <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
               <div class="flex">
-                <div class="hidden sm:ml-6 sm:flex">
+                <div class="header-text hidden sm:ml-6 sm:flex">
 
                   <nuxt-link
                     to="/"
@@ -159,6 +159,7 @@ export default {
     
   }
   }
+
 }
 </script>
 
@@ -169,6 +170,7 @@ export default {
 
 
 }
+
 
 *,
 *:before,
@@ -183,17 +185,20 @@ export default {
 }
 
 .button--green {
+  font-family: sans-serif;
   display: inline-block;
   border-radius: 4px;
   border: 1px solid white;
   color: black;
+  width: 7%;
   text-decoration: none;
   padding: 10px 30px;
   position: fixed;
-  top: 80%;
+  top: 87%;
   left: 47%;
   margin-top: -50px;
   margin-left: -100px;
+  text-align: center;
 
 }
 
@@ -203,24 +208,32 @@ export default {
 }
 
 .button--grey {
+  font-family: sans-serif;
   display: inline-block;
   border-radius: 4px;
   border: 1px solid white;
+  width: 7%;
   color: black;
   text-decoration: none;
   padding: 10px 30px;
   margin-left: 15px;
   position: fixed;
-  top: 80%;
+  top: 87%;
   left: 57%;
   margin-top: -50px;
   margin-left: -100px;
+  text-align: center;
 }
+
 
 .button--grey:hover {
   color: black;
   background-color: white;
 }
+
+.header-text {
+  font-family: sans-serif;
+  }
 
 .animation-area{
     background: linear-gradient(to left, rgb(0, 69, 231), rgb(0, 219, 243));
@@ -336,6 +349,15 @@ export default {
     left: 50%;
     transform: translate(-50%, -50%);
     font-family: sans-serif;
+}
+
+.text-bottom a {
+    font-family: sans-serif;
+
+}
+
+.text-bottom a:hover {
+  color: black;
 }
 
 .corner_logo {
