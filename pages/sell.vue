@@ -75,58 +75,51 @@
 
 
 
-
-    
-
-
-  
-
   <!-- Modal form to sell an article -->
-  <div class="modal fade" id="sellArticle" role="dialog">
+  <div class="modal " id="sellArticle" role="dialog">
     <div class="modal-dialog">
+      <form>
 
-      <!-- Modal content-->
-      <div class="modal-content">
         <div class="modal-header">
           <button type="button" onclick="App.unblurBackground();" class="close" data-dismiss="modal">&times;</button>
           <h4 class="modal-title">Sell your article</h4>
         </div>
-        <div class="modal-body">
 
-          <div class="row">
-            <div class="col-lg-12">
-              <form>
-                <div class="form-group">
-                  <label for="article_name">Article name</label>
-                  <input type="text" class="form-control" id="article_name" placeholder="Enter the name of your article">
-                </div>
-                <div class="form-group">
-                  <label for="price">Price in ETH</label>
-                  <input type="number" class="form-control" id="article_price" placeholder="1" pattern="[0-9]+([\.,][0-9]+)?"
-                    step="0.01">
-                </div>
-                <div class="form-group">
-                  <label for="description">Description</label>
-                  <textarea type="text" class="form-control vresize" id="article_description" placeholder="Describe your article"
-                    maxlength="255"></textarea>
-                </div>
-                <input type ="file" id="input" onchange='uploadFile();' />
-                <label type="text" id="hashvalue" hidden="hidden"></label>
-                <p id="ipfslinktitle"></p>
-                <p id="ipfslink"><a href=''></a></p>
-              </form>
-            </div>
-          </div>
+        <button type="button" onclick="App.unblurBackground();" class="close" data-dismiss="modal">&times;</button>
+
+        <div class="user-box">
+          <label for="article_name">Article name</label>
+          <input type="text" class="form-control" id="article_name" placeholder="Enter the name of your article">
         </div>
+
+        <div class="user-box">
+          <label for="price">Price in ETH</label>
+          <input type="number" class="form-control" id="article_price" placeholder="1" pattern="[0-9]+([\.,][0-9]+)?" step="0.01">
+        </div>
+
+        <div class="user-box">
+          <label for="description">Description</label>
+          <textarea type="text" class="form-control vresize" id="article_description" placeholder="Describe your article" maxlength="255"></textarea>
+        </div>
+        
+        <label type="text" id="hashvalue" hidden="hidden"></label>
+        <input type ="file" id="input" onchange='uploadFile();' />
+        <p id="ipfslinktitle"></p>
+        <p id="ipfslink"><a href=''></a></p>
+
+
         <div class="modal-footer">
           <button type="button" class="btn btn-primary btn-success" data-dismiss="modal" onclick="App.sellArticle(); submitFile(); return false;">Submit</button>
           <button type="button" class="btn" data-dismiss="modal" onclick="App.unblurBackground();" >Close</button>
-          
         </div>
-      </div>
+
+      </form>
 
     </div>
   </div>
+
+
+
 
     
   <div class="modal-loading" id ="modal-loading" hidden="true">
@@ -165,6 +158,7 @@
     <div id= "modal-purchase" >
       <h1> Thank you for your purchase!</h1>
       <h2 id ="purchaselink"></h2>
+      <a href="somelink.com" download><button class="download-button">Download Link</button></a>
           <button type="button" class="modal-close" onclick="App.CloseReceipt();">&times;</button>
     </div>
   </div>
@@ -537,6 +531,163 @@ fetch({store, redirect}) {
     top: 10px;
     left: 60px;
     z-index: 50;
+}
+
+.modal-dialog {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  padding: 40px;
+  transform: translate(-50%, -50%);
+  background: rgba(0,0,0,.5);
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0,0,0,.6);
+  border-radius: 10px;
+}
+
+.modal-dialog h2 {
+  margin: 0 0 30px;
+  padding: 0;
+  color: #fff;
+  text-align: center;
+}
+
+.modal-dialog .user-box {
+  position: relative;
+}
+
+.modal-dialog .user-box input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;
+}
+.modal-dialog .user-box label {
+  position: absolute;
+  top:0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  pointer-events: none;
+  transition: .5s;
+}
+
+.modal-dialog .user-box input:focus ~ label,
+.modal-dialog .user-box input:valid ~ label {
+  top: -20px;
+  left: 0;
+  color: #03e9f4;
+  font-size: 12px;
+}
+
+.modal-dialog form button {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  color: #03e9f4;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: .5s;
+  margin-top: 40px;
+  letter-spacing: 4px
+}
+
+.modal-dialog form a {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  color: #03e9f4;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: .5s;
+  margin-top: 40px;
+  letter-spacing: 4px
+}
+
+.modal-dialog a:hover {
+  background: #03e9f4;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #03e9f4,
+              0 0 25px #03e9f4,
+              0 0 0px #03e9f4,
+              0 0 0px #03e9f4;
+} 
+
+.modal-dialog button:hover {
+  background: #03e9f4;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #03e9f4,
+              0 0 25px #03e9f4,
+              0 0 0px #03e9f4,
+              0 0 0px red;
+}
+
+.modal-dialog a span {
+  position: absolute;
+  display: block;
+}
+
+.modal-dialog button span {
+  position: absolute;
+  display: block;
+}
+
+.modal-dialog a span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #03e9f4);
+  animation: btn-anim1 1s linear infinite;
+}
+
+
+
+.modal-dialog a span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #03e9f4);
+  animation: btn-anim2 1s linear infinite;
+  animation-delay: .25s
+}
+
+
+
+.modal-dialog a span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, #03e9f4);
+  animation: btn-anim3 1s linear infinite;
+  animation-delay: .5s
+}
+
+
+
+.modal-dialog a span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #03e9f4);
+  animation: btn-anim4 1s linear infinite;
+  animation-delay: .75s
 }
 
 
