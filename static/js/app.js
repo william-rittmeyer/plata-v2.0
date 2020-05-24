@@ -397,6 +397,17 @@ App = {
        // background.setAttribute("style", "filter: brightness(1);");
     },
 
+    resetModal: async () => {
+       $('#article_name').val('');
+       $('#article_price').val('');
+       $('#article_description').val('');
+       $('#hashvalue').text('');
+       $('#ipfslink').text('');
+       $('#ipfslinktitle').text('');
+       $('#input').val('');
+
+    },
+
     
 };
 
