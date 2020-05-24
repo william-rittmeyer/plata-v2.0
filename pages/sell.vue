@@ -2,6 +2,8 @@
 
   <section>
 
+  <!--ARTICLE TABLE -->
+
   <div class="table1" id="article-list">
       <div class="panel-heading">
         <br/>
@@ -10,6 +12,7 @@
       </div>
         <div id="articlesRow" class="row">
         Loading Items for Sale...
+
         <!-- ARTICLES LOAD HERE -->
 
         </div>    
@@ -24,12 +27,11 @@
       </div>
 
     
-
+      <!--EVENTS TABLE -->
 
       <div class="table2" id="article-list2">
 
 
-      <div class="row panel panel-default">
         <div class="panel-heading clearfix">
           <div class="panel-title">
             <button class="btn btn-info btn-lg pull-left btn-event btn-unsubscribe" onclick="App.stopListeningToEvents(); return false;">Unsubscribe</button>
@@ -52,7 +54,7 @@
       </div>
 
       
-        
+        <!--ARTICLE TEMPLATE -->
 
 
 
@@ -161,7 +163,7 @@
         <br/>
         <br/>
         <br/>
-      <a href="somelink.com" download><button class="download-button">Download Link</button></a>
+      <a href="somelink.com"><button class="download-button">Download Link</button></a>
       <button type="button" class="modal-close" onclick="App.CloseReceipt();">&times;</button>
     </div>
   </div>
