@@ -37,16 +37,15 @@
 
       <nuxt-link
             to="/login"
-            class="button--green "
+            class="button--green"
           >
           Login
           </nuxt-link>
 
           <nuxt-link
             to="/register"
-            class="button--grey "
-          >
-          Register
+            class="button--grey"
+          >Register
           </nuxt-link>
       </div>
 
@@ -77,9 +76,9 @@ export default {
 */
 
 .front_image {
-  width: 300px;
+  width: 500px;
   position: absolute;
-  top: 30%;
+  top: 39%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -93,21 +92,21 @@ export default {
   color: white;
   letter-spacing: 1px;
   position: absolute;
-  top: 50%;
+  top: 70%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
 .subtitle {
   font-weight: 300;
-  font-size: 35px;
-  text-allign: center;
+  font-size: 25px;
+  text-align: center;
   color: white;
   word-spacing: 5px;
   padding-bottom: 15px;
   font-family: sans-serif;
   position: absolute;
-  top: 60%;
+  top: 77.5%;
   left: 50%;
   transform: translate(-50%, -50%);
 
