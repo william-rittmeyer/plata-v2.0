@@ -65,7 +65,7 @@
                 <div class="article-description" style ="display: inline-block;"></div>
                 <div class="article-price" style ="display: inline-block;"></div>
                 <div class="article-seller" style ="display: inline-block;"></div>
-                <button type="article-button" style ="display: inline-block;" class="article-button btn btn-primary btn-success btn-buy" onclick="App.buyArticle(event); return false;">Buy</button>
+                <button type="button" style ="display: inline-block;" class="btn btn-primary btn-success btn-buy article-button" onclick="App.buyArticle(event); return false;">Buy</button>
                 <br/>
             </div>
           </div>
@@ -75,100 +75,103 @@
 
 
 
-  <!-- Modal form to sell an article -->
-  <div class="modal " id="sellArticle" role="dialog">
-    <div class="modal-dialog">
-      <form>
 
-        <div class="modal-header">
-          <button type="button" onclick="App.unblurBackground();" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Sell your article</h4>
-        </div>
+  <!-- MODAL FORM TO SELL AN ARTICLE -->
 
+    <div class="modal " id="sellArticle" role="dialog">
+      <div class="modal-dialog">
         <button type="button" onclick="App.unblurBackground();" class="close" data-dismiss="modal">&times;</button>
 
-        <div class="user-box">
-          <label for="article_name">Article name</label>
-          <input type="text" class="form-control" id="article_name" placeholder="Enter the name of your article">
-        </div>
+        <form>
 
-        <div class="user-box">
-          <label for="price">Price in ETH</label>
-          <input type="number" class="form-control" id="article_price" placeholder="1" pattern="[0-9]+([\.,][0-9]+)?" step="0.01">
-        </div>
-
-        <div class="user-box">
-          <label for="description">Description</label>
-          <textarea type="text" class="form-control vresize" id="article_description" placeholder="Describe your article" maxlength="255"></textarea>
-        </div>
-        
-        <label type="text" id="hashvalue" hidden="hidden"></label>
-        <input type ="file" id="input" onchange='uploadFile();' />
-        <p id="ipfslinktitle"></p>
-        <p id="ipfslink"><a href=''></a></p>
+          <div class="modal-header">
+            
+            <h4 class="modal-title">Sell your article</h4>
+          </div>
 
 
-        <div class="modal-footer">
-          <button type="button" class="btn btn-primary btn-success" data-dismiss="modal" onclick="App.sellArticle(); submitFile(); return false;">Submit</button>
-          <button type="button" class="btn" data-dismiss="modal" onclick="App.unblurBackground();" >Close</button>
-        </div>
+          <div class="user-box">
+            <input type="text" name="" required="" id="article_name">
+            <label>Article name</label>
+          </div>
 
-      </form>
+          <div class="user-box">
+            <input type="number" name="" required="" id="article_price" pattern="[0-9]+([\.,][0-9]+)?" step="0.01">
+            <label>Price in ETH</label>
+          </div>
 
-    </div>
-  </div>
+          <div class="user-box">
+            <input type="text" class="form-control btn" name="" required="" id="article_description">
+            <label>Description</label>
+          </div>
+          
+          <label type="text" id="hashvalue" hidden="hidden"></label>
+          <input type ="file" id="input" onchange='uploadFile();'/>
+          <p id="ipfslinktitle"></p>
+          <p id="ipfslink"><a href=''></a></p>
 
 
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary btn-success" data-dismiss="modal" onclick="App.sellArticle(); submitFile(); return false;">Submit</button>
+            <button type="button" class="btn" data-dismiss="modal" onclick="App.unblurBackground();" >Close</button>
+          </div>
 
+        </form>
 
-    
-  <div class="modal-loading" id ="modal-loading" hidden="true">
-      <h1> Please wait as the transaction is processed</h1>
-
-      <div class = "loading-animation">
-      <div class="sk-grid">
-        <div class="sk-grid-cube"></div>
-        <div class="sk-grid-cube"></div>
-        <div class="sk-grid-cube"></div>
-        <div class="sk-grid-cube"></div>
-        <div class="sk-grid-cube"></div>
-        <div class="sk-grid-cube"></div>
-        <div class="sk-grid-cube"></div>
-        <div class="sk-grid-cube"></div>
-        <div class="sk-grid-cube"></div>
       </div>
-
-    </div>
-
-      <button type="button" class="modal-close" onclick="App.CloseWindow();">&times;</button>
     </div>
 
 
+    <!-- LOADING MODAL -->
+
+    <div class="modal-loading modal-dialog" id ="modal-loading" hidden="true">
+        <h1> Please wait as the transaction is processed</h1>
+        <div class = "loading-animation">
+          <div class="sk-grid">
+            <div class="sk-grid-cube"></div>
+            <div class="sk-grid-cube"></div>
+            <div class="sk-grid-cube"></div>
+            <div class="sk-grid-cube"></div>
+            <div class="sk-grid-cube"></div>
+            <div class="sk-grid-cube"></div>
+            <div class="sk-grid-cube"></div>
+            <div class="sk-grid-cube"></div>
+            <div class="sk-grid-cube"></div>
+          </div>
+      </div>
+        <button type="button" class="modal-close" onclick="App.CloseWindow();">&times;</button>
+    </div>
 
 
 
-  <div class="modal-submission" id ="modal-submission" hidden="true">
+    <!-- SUBMISSION COMPLETE MODAL -->
+
+  <div class="modal-submission modal-dialog" id ="modal-submission" hidden="true">
     <div id= "modal-sale" >
       <h1> Your file has successfully been put up for sale</h1>
           <button type="button" class="modal-close" onclick="App.CloseSubmission();">&times;</button>
     </div>
   </div>
+
+    <!-- RECEIPT MODAL -->
   
-  <div class="modal-receipt" id ="modal-receipt" hidden="true">
+  <div class="modal-receipt modal-dialog" id ="modal-receipt" hidden="true">
     <div id= "modal-purchase" >
       <h1> Thank you for your purchase!</h1>
-      <h2 id ="purchaselink"></h2>
+        <br/>
+        <br/>
+        <br/>
       <a href="somelink.com" download><button class="download-button">Download Link</button></a>
-          <button type="button" class="modal-close" onclick="App.CloseReceipt();">&times;</button>
+      <button type="button" class="modal-close" onclick="App.CloseReceipt();">&times;</button>
     </div>
   </div>
 
-  <div class="modal-error" id ="modal-error" hidden="true">
+    <!-- ERROR MODAL -->
+
+  <div class="modal-error modal-dialog" id ="modal-error" hidden="true">
       <h1> Whoops! Looks like something went wrong.</h1>
           <button type="button" class="modal-close" onclick="App.CloseError();">&times;</button>
   </div>
-
-
 
 
   </section>
@@ -198,6 +201,23 @@ fetch({store, redirect}) {
     position: absolute;
     left: 80px;
     top:200px;
+    background-color: white;
+    opacity: .8;
+    overflow: auto;
+    white-space: nowrap;
+    z-index: 0;
+
+    
+
+}
+.table1-header{
+
+    
+    height: 40px;
+    width: 1150px;
+    position: absolute;
+    left: 80px;
+    top:100px;
     background-color: white;
     opacity: .8;
     overflow: auto;
@@ -374,7 +394,6 @@ fetch({store, redirect}) {
 .article-button{
     position: absolute;
     left: 1050px;
-    font-size: 10px;
 
 }
 
@@ -393,47 +412,32 @@ fetch({store, redirect}) {
 
 }
 
-.modal:target {
-    visibility: visible;
-    opacity: 1;
-  }
-
-.modal-dialog{
-
-    height: 600px;
-    width: 650px;
-    position: absolute;
-    left: 700px;
-    top:200px;
-    background:white;
-    transition: all 5s ease-in-out;
-}
 
 .modal-receipt{
 
-    height: 600px;
+    height: 300px;
     width: 650px;
     position: absolute;
     left: 700px;
     top:200px;
-    background: white;
-    transition: all 5s ease-in-out;
+    color: white;
+
+
 }
 
 .modal-submission{
 
-    height: 600px;
+    height: 300px;
     width: 650px;
     position: absolute;
     left: 700px;
-    top:200px;
-    background: white;
-    transition: all 5s ease-in-out;
+    top:500px;
 }
 
 .modal-submission h1{
 
     font-size: 20px;
+    color:white;
     position: absolute;
     top:50px;
 
@@ -454,6 +458,7 @@ fetch({store, redirect}) {
 .modal-loading h1{
 
     font-size: 20px;
+    color:white;
     position: absolute;
     top:50px;
 
@@ -466,7 +471,7 @@ fetch({store, redirect}) {
     position: absolute;
     left: 700px;
     top:200px;
-    background: white;
+    color: white;
     transition: all 5s ease-in-out;
 
 }
@@ -540,7 +545,7 @@ fetch({store, redirect}) {
   width: 400px;
   padding: 40px;
   transform: translate(-50%, -50%);
-  background: rgba(0,0,0,.5);
+  background: rgba(0,0,0,.9);
   box-sizing: border-box;
   box-shadow: 0 15px 25px rgba(0,0,0,.6);
   border-radius: 10px;
@@ -601,6 +606,7 @@ fetch({store, redirect}) {
   letter-spacing: 4px
 }
 
+
 .modal-dialog form a {
   position: relative;
   display: inline-block;
@@ -634,6 +640,8 @@ fetch({store, redirect}) {
               0 0 0px #03e9f4,
               0 0 0px red;
 }
+
+
 
 .modal-dialog a span {
   position: absolute;
