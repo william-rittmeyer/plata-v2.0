@@ -205,7 +205,6 @@ uploadFile = () => {
       }
 
       $('#hashvalue').text(hash);
-      $('#ipfslinktitle').text('Your IPFS Link');
       $('#submission-load').attr('hidden', true);
       $('#ipfslink').text('https://ipfs.infura.io/ipfs/' + hash);
 
