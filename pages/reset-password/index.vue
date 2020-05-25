@@ -1,6 +1,5 @@
 <template>
 
-
   <div class="login-box">
     <h2>Reset Password</h2>
     <p class="mt-6 text-base leading-5 text-white max-w-sm mx-auto ">
@@ -38,24 +37,25 @@
 <script>
 export default {
 	data() {
-	return {
-	email: ''
-	}
+    return {
+      email: ''
+    }
 	},
 	methods: {
 		async submit(){
-		try{
-			const response = await this.$axios.post('api/users/sendResetPasswordRequest', {
-				email: this.email
-	})
-	console.log(response)
-	} catch (err) {
-	console.log(err.response)
+		  try{
+		    const response = await this.$axios.post('api/users/sendResetPasswordRequest', {
+				  email: this.email})
+        console.log(response)
 
-	}
-	}
+      } catch (err) {
+
+	console.log(err.response)
+      }
+    }
 	}
 }
+
 </script>
 
 <style lang="css">
@@ -227,10 +227,5 @@ body {
   animation: btn-anim4 1s linear infinite;
   animation-delay: .75s
 }
-
-
-
-
-
 
 </style>
