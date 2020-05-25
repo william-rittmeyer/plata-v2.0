@@ -1,30 +1,28 @@
 <template>
   <section>
 
-
-
     <div class="reset-box">
-    <p class="mt-6 text-base leading-5 text-white max-w-sm mx-auto ">
-      Welcome back {{user.email}}, please enter your new password below.
-    </p>
-    <br></br>
-    <br></br>
+      <p class="mt-6 text-base leading-5 text-white max-w-sm mx-auto ">
+        Welcome back {{user.email}}, please enter your new password below.
+      </p>
+      <br></br>
+      <br></br>
     
-
       <form @submit.prevent="submit">
 
-      <div class="user-box">
-      <input type="password" name="" required="" v-model="email"
-      id="password"
-              
-              required
-
-              placeholder=""
-              >
-      <label for="password" >Password</label>
-    </div>
+        <div class="user-box">
+          <input 
+            type="password" 
+            name="" 
+            required="" 
+            v-model="email"
+            id="password"
+            required
+            placeholder=""
+          >
+          <label for="password" >Password</label>
+        </div>
       
-
         <div class="mt-6">
           <span class="block w-full rounded-md shadow-sm">
             <button
@@ -36,10 +34,6 @@
         </div>
       </form>
     </div>
-  </div>
-</div>
-
-
   </section>
 </template>
 
@@ -55,27 +49,28 @@ export default {
 	async asyncData({ $axios, params, redirect }) {
 
 		try {
-		const { data } = await $axios.get(`/api/users/tokens/${params.token}`)
+		  const { data } = await $axios.get(`/api/users/tokens/${params.token}`)
 
-		if (moment() > moment(data.resetPasswordTokenExpiration) || data.
-		resetPasswordTokenExpiration === null) {
-			redirect('/')
-		}
+		  if (moment() > moment(data.resetPasswordTokenExpiration) || data.resetPasswordTokenExpiration === null) {
+			 redirect('/')
+		  }
 		
-		return {
+		  return {
 
 			user: data
-		}
+
+      }
 
 		}	catch (err) {
-		if (err) redirect('/')
-		}
+      if (err) redirect('/')
+    }
 	},
+
 	methods: {
 
 		async submit() {
 			try {
-			await this.$axios.put(`/api/users/${this.user.id}/resetPassword`, {
+			 await this.$axios.put(`/api/users/${this.user.id}/resetPassword`, {
 				password: this.password
 			})
 
@@ -84,9 +79,9 @@ export default {
 			} catch (err) {
 			throw new Error(err)
 			}
-	}
-	}
-	}
+    }
+  }
+}
 </script>
 
 
@@ -95,6 +90,7 @@ export default {
 html {
   height: 100%;
 }
+
 body {
   margin:0;
   padding:0;
@@ -223,8 +219,6 @@ body {
   animation: btn-anim1 1s linear infinite;
 }
 
-
-
 .reset-box a span:nth-child(2) {
   top: -100%;
   right: 0;
@@ -234,8 +228,6 @@ body {
   animation: btn-anim2 1s linear infinite;
   animation-delay: .25s
 }
-
-
 
 .reset-box a span:nth-child(3) {
   bottom: 0;
@@ -247,8 +239,6 @@ body {
   animation-delay: .5s
 }
 
-
-
 .reset-box a span:nth-child(4) {
   bottom: -100%;
   left: 0;
@@ -258,8 +248,5 @@ body {
   animation: btn-anim4 1s linear infinite;
   animation-delay: .75s
 }
-
-
-
 
 </style>
