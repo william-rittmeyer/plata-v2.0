@@ -109,8 +109,10 @@
           
           <label type="text" id="hashvalue" hidden="hidden"></label>
           <input type ="file" id="input" class="filename" onchange='uploadFile();'/>
-          <p id="ipfslinktitle" hidden = "hidden"></p>
+
+          
           <p id="ipfslink" hidden = "hidden"><a href=''></a></p>
+          
           
           <div id="submission-load" class = "loading-animation2" hidden="true">
           <h1>Uploading file..</h1>
@@ -127,9 +129,12 @@
           </div>
         </div>
 
+        
+
 
           <div class="modal-footer">
             <button type="button" class="btn btn-primary btn-success" data-dismiss="modal" onclick="App.sellArticle(); submitFile(); return false;">Submit</button>
+            
 
           </div>
 
@@ -142,6 +147,7 @@
     <!-- LOADING MODAL -->
 
     <div class="modal-loading modal-dialog" id ="modal-loading" hidden="true">
+        <br/>
         <h1> Please wait as the transaction is processed</h1>
         <div class = "loading-animation">
           <div class="sk-grid">
@@ -168,6 +174,7 @@
     <br/>
       <h1> Your file has successfully been put up for sale</h1>
           <button type="button" class="modal-close" onclick="App.CloseSubmission();">&times;</button>
+          <img src="../assets/checkmark.png" class="checkmark-image">
     </div>
   </div>
 
@@ -187,8 +194,10 @@
     <!-- ERROR MODAL -->
 
   <div class="modal-error modal-dialog" id ="modal-error" hidden="true">
+        <br/>
       <h1> Whoops! Looks like something went wrong.</h1>
-          <button type="button" class="modal-close" onclick="App.CloseError();">&times;</button>
+      <button type="button" class="modal-close" onclick="App.CloseError();">&times;</button>
+      <img src="../assets/error.png" class="error_image">
   </div>
 
 
@@ -446,7 +455,7 @@ fetch({store, redirect}) {
 
 .modal-submission{
 
-    height: 300px;
+    height: 400px;
     width: 650px;
     position: absolute;
     left: 700px;
@@ -456,11 +465,13 @@ fetch({store, redirect}) {
 .modal-submission h1{
 
     font-size: 20px;
+    font-weight: bold;
     color:white;
     position: absolute;
-    top:50px;
+    top:70px;
 
 }
+
 
 .modal-loading{
 
@@ -471,6 +482,8 @@ fetch({store, redirect}) {
     top:200px;
     background: white;
     transition: all 5s ease-in-out;
+    font-size: 20px;
+    font-weight: bold;
 
 }
 
@@ -478,8 +491,9 @@ fetch({store, redirect}) {
 
     font-size: 20px;
     color:white;
+    font-weight: bold;
     position: absolute;
-    top:50px;
+    top:70px;
 
 }
 
@@ -491,7 +505,8 @@ fetch({store, redirect}) {
     left: 700px;
     top:200px;
     color: white;
-    transition: all 5s ease-in-out;
+    font-size:20px;
+    font-weight: bold;
 
 }
 
@@ -501,8 +516,9 @@ fetch({store, redirect}) {
 
     
     position: absolute;
-    left: 160px;
+    left: 150px;
     top:200px;
+    --sk-size:90px;
 
 
 
@@ -518,14 +534,24 @@ fetch({store, redirect}) {
 
 }
 
+
 .loading-animation2 h1{
 
     color: white;
 
 }
 
+
 .filename{
   color: white;
+}
+
+.checkmark-image{
+  position: absolute;
+  top: 160px;
+  left: 120px;
+
+  width: 160px;;
 }
 
 .modal .close{
@@ -739,6 +765,15 @@ fetch({store, redirect}) {
   background: linear-gradient(360deg, transparent, #03e9f4);
   animation: btn-anim4 1s linear infinite;
   animation-delay: .75s
+}
+
+.error_image {
+
+position: absolute;
+top: 40px;
+left: 0px;
+
+  
 }
 
 
