@@ -1,7 +1,7 @@
 <template>
   <div class="container mx-auto text-center py-16 px-6">
 
-   <div v-if="$store.state.user">
+    <div v-if="$store.state.user">
       <br></br>
       <br></br>
       <br></br>
@@ -14,17 +14,13 @@
       </h1>
 
 
-      </div>
+    </div>
 
     <div v-if="!$store.state.user">
 
-    <br></br>
+      <br></br>
 
-
-
-   <img src="../assets/placeholder_logo.png" class="front_image">
-
-
+      <img src="../assets/placeholder_logo.png" class="front_image">
 
       <h1 class="title text-white">
         Plata 2.0
@@ -34,26 +30,21 @@
         An Ethereum-based platform for exchanging digital assets
       </h2>
 
+      <nuxt-link
+          to="/login"
+          class="button--1"
+      >
+          Login
+      </nuxt-link>
 
       <nuxt-link
-            to="/login"
-            class="button--green"
-          >
-          Login
-          </nuxt-link>
+          to="/register"
+          class="button--2"
+      >Register
 
-          <nuxt-link
-            to="/register"
-            class="button--grey"
-          >Register
-          </nuxt-link>
-      </div>
-
-   
+      </nuxt-link>
     </div>
   </div>
-  </div>
-
 </template>
 
 <script>
@@ -63,7 +54,7 @@ export default {
   components: {
     Logo
   },
-  }
+}
 </script>
 
 <style>
@@ -82,7 +73,6 @@ export default {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-
 
 .title {
   font-family: sans-serif;
@@ -109,22 +99,14 @@ export default {
   top: 77.5%;
   left: 50%;
   transform: translate(-50%, -50%);
-
-
 }
 
 .links {
   padding-top: 15px;
   font-family: sans-serif;
-  
 }
 
 .user{
     font-family: sans-serif;
-
 }
-
-
-
-
 </style>
