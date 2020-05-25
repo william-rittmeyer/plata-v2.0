@@ -164,6 +164,9 @@ export default {
 </script>
 
 <style>
+
+/* DEFAULT */
+
 .body {
   font-family: sans-serif;
   font-size: 16px;
@@ -184,7 +187,7 @@ export default {
 
 }
 
-.button--green {
+.button--1 {
   font-family: sans-serif;
   display: inline-block;
   border-radius: 4px;
@@ -202,12 +205,12 @@ export default {
 
 }
 
-.button--green:hover {
+.button--1:hover {
   color: black;
   background-color: white;
 }
 
-.button--grey {
+.button--2 {
   font-family: sans-serif;
   display: inline-block;
   border-radius: 4px;
@@ -226,7 +229,7 @@ export default {
 }
 
 
-.button--grey:hover {
+.button--2:hover {
   color: black;
   background-color: white;
 }
@@ -234,6 +237,8 @@ export default {
 .header-text {
   font-family: sans-serif;
   }
+
+/* ANIMATION BACKGROUND */
 
 .animation-area{
     background: linear-gradient(to left, rgb(0, 69, 231), rgb(0, 219, 243));
@@ -342,6 +347,8 @@ export default {
 
 }
 
+/* FOOTER */
+
 .text-bottom {
     color: white;
     position: fixed;
@@ -359,6 +366,8 @@ export default {
 .text-bottom a:hover {
   color: black;
 }
+
+/* CORNER LOGO */
 
 .corner_logo {
 position: absolute;
