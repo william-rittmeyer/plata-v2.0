@@ -1,5 +1,4 @@
 <template>
-
   <div class="register-box">
     <h2>Register an Account</h2>
     <form @submit.prevent="submitform">
@@ -22,6 +21,7 @@
 </template>
 
 <script>
+
 export default {
 
   
@@ -34,8 +34,8 @@ export default {
 
     fetch({store, redirect}) {
   if (store.state.user) {
-  return redirect('/')
-  }
+    return redirect('/')
+    }
   },
 
   methods: {
@@ -54,6 +54,7 @@ export default {
     }
   }
 }
+
 </script>
 
 <style lang="css">
