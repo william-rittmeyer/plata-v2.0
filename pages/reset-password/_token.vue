@@ -3,7 +3,7 @@
 
 
 
-    <div class="login-box">
+    <div class="reset-box">
     <p class="mt-6 text-base leading-5 text-white max-w-sm mx-auto ">
       Welcome back {{user.email}}, please enter your new password below.
     </p>
@@ -102,7 +102,7 @@ body {
   background: linear-gradient(#141e30, #243b55);
 }
 
-.login-box {
+.reset-box {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -115,18 +115,18 @@ body {
   border-radius: 10px;
 }
 
-.login-box h2 {
+.reset-box h2 {
   margin: 0 0 30px;
   padding: 0;
   color: #fff;
   text-align: center;
 }
 
-.login-box .user-box {
+.reset-box .user-box {
   position: relative;
 }
 
-.login-box .user-box input {
+.reset-box .user-box input {
   width: 100%;
   padding: 10px 0;
   font-size: 16px;
@@ -137,7 +137,7 @@ body {
   outline: none;
   background: transparent;
 }
-.login-box .user-box label {
+.reset-box .user-box label {
   position: absolute;
   top:0;
   left: 0;
@@ -148,15 +148,15 @@ body {
   transition: .5s;
 }
 
-.login-box .user-box input:focus ~ label,
-.login-box .user-box input:valid ~ label {
+.reset-box .user-box input:focus ~ label,
+.reset-box .user-box input:valid ~ label {
   top: -20px;
   left: 0;
   color: #03e9f4;
   font-size: 12px;
 }
 
-.login-box form button {
+.reset-box form button {
   position: relative;
   display: inline-block;
   padding: 10px 20px;
@@ -170,7 +170,7 @@ body {
   letter-spacing: 4px
 }
 
-.login-box form a {
+.reset-box form a {
   position: relative;
   display: inline-block;
   padding: 10px 20px;
@@ -184,7 +184,7 @@ body {
   letter-spacing: 4px
 }
 
-.login-box a:hover {
+.reset-box a:hover {
   background: #03e9f4;
   color: #fff;
   border-radius: 5px;
@@ -194,7 +194,7 @@ body {
               0 0 0px #03e9f4;
 } 
 
-.login-box button:hover {
+.reset-box button:hover {
   background: #03e9f4;
   color: #fff;
   border-radius: 5px;
@@ -204,17 +204,17 @@ body {
               0 0 0px #03e9f4;
 }
 
-.login-box a span {
+.reset-box a span {
   position: absolute;
   display: block;
 }
 
-.login-box button span {
+.reset-box button span {
   position: absolute;
   display: block;
 }
 
-.login-box a span:nth-child(1) {
+.reset-box a span:nth-child(1) {
   top: 0;
   left: -100%;
   width: 100%;
@@ -225,7 +225,7 @@ body {
 
 
 
-.login-box a span:nth-child(2) {
+.reset-box a span:nth-child(2) {
   top: -100%;
   right: 0;
   width: 2px;
@@ -237,7 +237,7 @@ body {
 
 
 
-.login-box a span:nth-child(3) {
+.reset-box a span:nth-child(3) {
   bottom: 0;
   right: -100%;
   width: 100%;
@@ -249,7 +249,7 @@ body {
 
 
 
-.login-box a span:nth-child(4) {
+.reset-box a span:nth-child(4) {
   bottom: -100%;
   left: 0;
   width: 2px;
