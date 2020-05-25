@@ -1,12 +1,9 @@
 <template>
-
-  <section>
-   <h1 class="database">
-        Database access page
-      </h1>
-
-
-  </section>
+ 	<section>
+  		<h1 class="database">
+        	Database access page
+   		</h1>
+	</section>
 </template>
 
 <script>
@@ -18,10 +15,9 @@ export default {
 	(store.state.user && store.state.user.
 	isAuthenticated ===false)
 	) {
-	return redirect('/')
+		return redirect('/')
+		}
 	}
-	}
-
 }
 
 </script>
@@ -39,6 +35,5 @@ export default {
   	color: white;
   	letter-spacing: 1px;
 }
-
 
 </style>
