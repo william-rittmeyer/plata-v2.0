@@ -1,6 +1,6 @@
 <template>
 
-  <div class="login-box">
+  <div class="register-box">
     <h2>Register an Account</h2>
     <form @submit.prevent="submitform">
       <div class="user-box">
@@ -58,7 +58,6 @@ export default {
 
 <style lang="css">
 
-
 html {
   height: 100%;
 }
@@ -69,31 +68,31 @@ body {
   background: linear-gradient(#141e30, #243b55);
 }
 
-.login-box {
+.register-box {
   position: absolute;
   top: 50%;
   left: 50%;
   width: 400px;
   padding: 40px;
   transform: translate(-50%, -50%);
-  background: rgba(0,0,0,.6);
+  background: rgba(0,0,0,.5);
   box-sizing: border-box;
   box-shadow: 0 15px 25px rgba(0,0,0,.6);
   border-radius: 10px;
 }
 
-.login-box h2 {
+.register-box h2 {
   margin: 0 0 30px;
   padding: 0;
   color: #fff;
   text-align: center;
 }
 
-.login-box .user-box {
+.register-box .user-box {
   position: relative;
 }
 
-.login-box .user-box input {
+.register-box .user-box input {
   width: 100%;
   padding: 10px 0;
   font-size: 16px;
@@ -104,7 +103,7 @@ body {
   outline: none;
   background: transparent;
 }
-.login-box .user-box label {
+.register-box .user-box label {
   position: absolute;
   top:0;
   left: 0;
@@ -115,15 +114,15 @@ body {
   transition: .5s;
 }
 
-.login-box .user-box input:focus ~ label,
-.login-box .user-box input:valid ~ label {
+.register-box .user-box input:focus ~ label,
+.register-box .user-box input:valid ~ label {
   top: -20px;
   left: 0;
   color: #03e9f4;
   font-size: 12px;
 }
 
-.login-box form button {
+.register-box form button {
   position: relative;
   display: inline-block;
   padding: 10px 20px;
@@ -137,7 +136,7 @@ body {
   letter-spacing: 4px
 }
 
-.login-box form a {
+.register-box form a {
   position: relative;
   display: inline-block;
   padding: 10px 20px;
@@ -151,7 +150,7 @@ body {
   letter-spacing: 4px
 }
 
-.login-box a:hover {
+.register-box a:hover {
   background: #03e9f4;
   color: #fff;
   border-radius: 5px;
@@ -161,7 +160,7 @@ body {
               0 0 0px #03e9f4;
 } 
 
-.login-box button:hover {
+.register-box button:hover {
   background: #03e9f4;
   color: #fff;
   border-radius: 5px;
@@ -171,17 +170,17 @@ body {
               0 0 0px #03e9f4;
 }
 
-.login-box a span {
+.register-box a span {
   position: absolute;
   display: block;
 }
 
-.login-box button span {
+.register-box button span {
   position: absolute;
   display: block;
 }
 
-.login-box a span:nth-child(1) {
+.register-box a span:nth-child(1) {
   top: 0;
   left: -100%;
   width: 100%;
@@ -192,7 +191,7 @@ body {
 
 
 
-.login-box a span:nth-child(2) {
+.register-box a span:nth-child(2) {
   top: -100%;
   right: 0;
   width: 2px;
@@ -204,7 +203,7 @@ body {
 
 
 
-.login-box a span:nth-child(3) {
+.register-box a span:nth-child(3) {
   bottom: 0;
   right: -100%;
   width: 100%;
@@ -216,7 +215,7 @@ body {
 
 
 
-.login-box a span:nth-child(4) {
+.register-box a span:nth-child(4) {
   bottom: -100%;
   left: 0;
   width: 2px;
