@@ -1,32 +1,37 @@
 <template>
-  <section>
-  <div class="animation-area" id ="animation-area" style="filter: blur(0px); filter: brightness(1);">  
+    <section>
+        <div class="animation-area" id ="animation-area" style="filter: blur(0px); filter: brightness(1);">  
 
-    <ul class="box-area">
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-      </ul>  
+            <ul class="box-area">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>  
 
-  	<nuxt />
+          	<nuxt/>
 
-  </div>
+        </div>
   	
-  </section>
+    </section>
 </template>
 
 <script>
+
 export default {
+
 }
+
 </script>
 
 <style lang="css">
+
+/* ANIMATION */
 
 .animation-area{
     background: linear-gradient(to left, rgb(0, 69, 231), rgb(0, 219, 243));
@@ -36,7 +41,6 @@ export default {
 
 }
 
-
 .box-area{
     position: absolute;
     top: 0;
@@ -45,10 +49,7 @@ export default {
     height:100%;
     overflow: hidden;
     z-index: -3;
-
-
 }
-
 
 .box-area li{
     position: absolute;
@@ -59,8 +60,6 @@ export default {
     background: rgba(255,255,255,0.2);
     animation: animate 20s linear infinite;
     bottom: -150px;
-   
-
 }
 
 .box-area li:nth-child(1){
@@ -70,6 +69,7 @@ export default {
     animation-delay: 14s;
 
 }
+
 .box-area li:nth-child(2){
     left: 30%;
     width: 30px;
@@ -78,6 +78,7 @@ export default {
     animation-duration: 12s;
 
 }
+
 .box-area li:nth-child(3){
     left: 70%;
     width: 60px;
@@ -85,6 +86,7 @@ export default {
     animation-delay: 25s;
 
 }
+
 .box-area li:nth-child(4){
     left: 42%;
     width: 30px;
@@ -100,6 +102,7 @@ export default {
     animation-duration: 20s;
     animation-delay:8s;
 }
+
 .box-area li:nth-child(6){
     left: 5%;
     width: 150px;
@@ -107,6 +110,7 @@ export default {
     animation-duration: 25s;
     animation-delay:12s;
 }
+
 .box-area li:nth-child(7){
     left: 28%;
     width: 30px;
@@ -135,8 +139,5 @@ export default {
     }
 
 }
-
-
-
 
 </style>
