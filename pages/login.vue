@@ -78,7 +78,7 @@ body {
   width: 400px;
   padding: 40px;
   transform: translate(-50%, -50%);
-  background: rgba(0,0,0,.6);
+  background: rgba(0,0,0,.5);
   box-sizing: border-box;
   box-shadow: 0 15px 25px rgba(0,0,0,.6);
   border-radius: 10px;
@@ -228,5 +228,5 @@ body {
   animation-delay: .75s
 }
 
-</style>
 
+</style>
