@@ -2,83 +2,76 @@
 
   <section>
 
-  <!--ARTICLE TABLE -->
+    <!--ARTICLE TABLE -->
 
-  <div class="table1" id="article-list">
+    <div class="table1" id="article-list">
       <div class="panel-heading">
         <br/>
-      <pre> Item           Description                      Price(ETH)       Seller</pre>
-      <br/>
+        <pre> Item           Description                      Price(ETH)       Seller</pre>
+        <br/>
       </div>
-        <div id="articlesRow" class="row">
+
+      <div id="articlesRow" class="row">
         Loading Items for Sale...
 
         <!-- ARTICLES LOAD HERE -->
 
-        </div>    
-      </div>
+      </div>    
+    </div>
 
-      <div class ="table1-header">
+    <div class ="table1-header">
         Current Marketplace
-      </div>
+    </div>
 
-      <div class ="table2-header">
+    <div class ="table2-header">
         Events
-      </div>
+    </div>
 
     
-      <!--EVENTS TABLE -->
+    <!--EVENTS TABLE -->
 
-      <div class="table2" id="article-list2">
-
-
-        <div class="panel-heading clearfix">
-          <div class="panel-title">
-            <button class="btn btn-info btn-lg pull-left btn-event btn-unsubscribe" onclick="App.stopListeningToEvents(); return false;">Unsubscribe</button>
-            <button class="btn btn-info btn-lg pull-left btn-event btn-subscribe" style="display: none" onclick="App.listenToEvents(); return false;">Subscribe</button>
-            <button class="btn btn-info btn-lg pull-left btn-show-events" data-toggle="collapse" data-target="#events" aria-expanded="false"
-                    aria-controls="events">Show Events</button>
-            <button class="btn btn-info btn-lg pull-right" data-toggle="modal" data-target="#sellArticle" onclick="App.blurBackground();" >Sell an
-              article</button>
-          </div>
-          <br/>
+    <div class="table2" id="article-list2">
+      <div class="panel-heading clearfix">
+        <div class="panel-title">
+          <button class="btn btn-info btn-lg pull-left btn-event btn-unsubscribe" onclick="App.stopListeningToEvents(); return false;">Unsubscribe</button>
+          <button class="btn btn-info btn-lg pull-left btn-event btn-subscribe" style="display: none" onclick="App.listenToEvents(); return false;">Subscribe</button>
+          <button class="btn btn-info btn-lg pull-left btn-show-events" data-toggle="collapse" data-target="#events" aria-expanded="false"
+                  aria-controls="events">Show Events</button>
+          <button class="btn btn-info btn-lg pull-right" data-toggle="modal" data-target="#sellArticle" onclick="App.blurBackground();" >Sell an
+            article</button>
         </div>
+        <br/>
+      </div>
         <ul id="events" class="collapse list-group"></ul>
-      </div>
+    </div>
+
+    <div class="col-3" id="article-list2"> </div>
 
       
-      </div>
-
-       <div class="col-3" id="article-list2">
-      
-      </div>
-
-      
-        <!--ARTICLE TEMPLATE -->
+    <!--ARTICLE TEMPLATE -->
 
 
 
-        <div id="articleTemplate" style="display: none;">
-          <div class="row-lg-12">
-            <div class="panel panel-default panel-article">
-              
-              <div class="panel-body">
-                <pre class="panel-title" style ="display: inline-block;"></pre>
-                <div class="article-description" style ="display: inline-block;"></div>
-                <div class="article-price" style ="display: inline-block;"></div>
-                <div class="article-seller" style ="display: inline-block;"></div>
-                <button type="button" style ="display: inline-block;" class="btn btn-primary btn-success btn-buy article-button" onclick="App.buyArticle(event); return false;">Buy</button>
-                <br/>
-            </div>
+    <div id="articleTemplate" style="display: none;">
+      <div class="row-lg-12">
+        <div class="panel panel-default panel-article">
+          
+          <div class="panel-body">
+            <pre class="panel-title" style ="display: inline-block;"></pre>
+            <div class="article-description" style ="display: inline-block;"></div>
+            <div class="article-price" style ="display: inline-block;"></div>
+            <div class="article-seller" style ="display: inline-block;"></div>
+            <button type="button" style ="display: inline-block;" class="btn btn-primary btn-success btn-buy article-button" onclick="App.buyArticle(event); return false;">Buy</button>
+            <br/>
           </div>
         </div>
       </div>
-  </div>
+    </div>
 
 
 
 
-  <!-- MODAL FORM TO SELL AN ARTICLE -->
+    <!-- MODAL FORM TO SELL AN ARTICLE -->
 
     <div class="modal " id="sellArticle" role="dialog">
       <div class="modal-dialog">
@@ -115,27 +108,22 @@
           
           
           <div id="submission-load" class = "loading-animation2" hidden="true">
-          <h1>Uploading file..</h1>
-          <div class="sk-grid">
-            <div class="sk-grid-cube"></div>
-            <div class="sk-grid-cube"></div>
-            <div class="sk-grid-cube"></div>
-            <div class="sk-grid-cube"></div>
-            <div class="sk-grid-cube"></div>
-            <div class="sk-grid-cube"></div>
-            <div class="sk-grid-cube"></div>
-            <div class="sk-grid-cube"></div>
-            <div class="sk-grid-cube"></div>
+            <h1>Uploading file..</h1>
+            <div class="sk-grid">
+              <div class="sk-grid-cube"></div>
+              <div class="sk-grid-cube"></div>
+              <div class="sk-grid-cube"></div>
+              <div class="sk-grid-cube"></div>
+              <div class="sk-grid-cube"></div>
+              <div class="sk-grid-cube"></div>
+              <div class="sk-grid-cube"></div>
+              <div class="sk-grid-cube"></div>
+              <div class="sk-grid-cube"></div>
+            </div>
           </div>
-        </div>
-
-        
-
 
           <div class="modal-footer">
             <button type="button" class="btn btn-primary btn-success" data-dismiss="modal" onclick="App.sellArticle(); submitFile(); return false;">Submit</button>
-            
-
           </div>
 
         </form>
@@ -147,59 +135,58 @@
     <!-- LOADING MODAL -->
 
     <div class="modal-loading modal-dialog" id ="modal-loading" hidden="true">
-        <br/>
-        <h1> Please wait as the transaction is processed</h1>
-        <div class = "loading-animation">
-          <div class="sk-grid">
-            <div class="sk-grid-cube"></div>
-            <div class="sk-grid-cube"></div>
-            <div class="sk-grid-cube"></div>
-            <div class="sk-grid-cube"></div>
-            <div class="sk-grid-cube"></div>
-            <div class="sk-grid-cube"></div>
-            <div class="sk-grid-cube"></div>
-            <div class="sk-grid-cube"></div>
-            <div class="sk-grid-cube"></div>
-          </div>
+      <br/>
+      <h1> Please wait as the transaction is processed</h1>
+      <div class = "loading-animation">
+        <div class="sk-grid">
+          <div class="sk-grid-cube"></div>
+          <div class="sk-grid-cube"></div>
+          <div class="sk-grid-cube"></div>
+          <div class="sk-grid-cube"></div>
+          <div class="sk-grid-cube"></div>
+          <div class="sk-grid-cube"></div>
+          <div class="sk-grid-cube"></div>
+          <div class="sk-grid-cube"></div>
+          <div class="sk-grid-cube"></div>
+        </div>
       </div>
-        <button type="button" class="modal-close" onclick="App.CloseWindow();">&times;</button>
+      <button type="button" class="modal-close" onclick="App.CloseWindow();">&times;</button>
     </div>
 
 
 
     <!-- SUBMISSION COMPLETE MODAL -->
 
-  <div class="modal-submission modal-dialog" id ="modal-submission" hidden="false">
-    <div id= "modal-sale" >
-    <br/>
-      <h1> Your file has successfully been put up for sale</h1>
-          <button type="button" class="modal-close" onclick="App.CloseSubmission();">&times;</button>
-          <img src="../assets/checkmark.png" class="checkmark-image">
+    <div class="modal-submission modal-dialog" id ="modal-submission" hidden="false">
+      <div id= "modal-sale" >
+        <br/>
+        <h1> Your file has successfully been put up for sale</h1>
+        <button type="button" class="modal-close" onclick="App.CloseSubmission();">&times;</button>
+        <img src="../assets/checkmark.png" class="checkmark-image">
+      </div>
     </div>
-  </div>
 
     <!-- RECEIPT MODAL -->
   
-  <div class="modal-receipt modal-dialog" id ="modal-receipt" hidden="true">
-    <div id= "modal-purchase" >
-      <h1> Thank you for your purchase!</h1>
+    <div class="modal-receipt modal-dialog" id ="modal-receipt" hidden="true">
+      <div id= "modal-purchase" >
+        <h1> Thank you for your purchase!</h1>
         <br/>
         <br/>
         <br/>
-      <a id="readlink" href="somelink.com"><button class="download-button">Download Link</button></a>
-      <button type="button" class="modal-close" onclick="App.CloseReceipt();">&times;</button>
+        <a id="readlink" href="somelink.com"><button class="download-button">Download Link</button></a>
+        <button type="button" class="modal-close" onclick="App.CloseReceipt();">&times;</button>
+      </div>
     </div>
-  </div>
 
     <!-- ERROR MODAL -->
 
-  <div class="modal-error modal-dialog" id ="modal-error" hidden="true">
-        <br/>
-      <h1> Whoops! Looks like something went wrong.</h1>
-      <button type="button" class="modal-close" onclick="App.CloseError();">&times;</button>
-      <img src="../assets/error.png" class="error_image">
-  </div>
-
+    <div class="modal-error modal-dialog" id ="modal-error" hidden="true">
+          <br/>
+        <h1> Whoops! Looks like something went wrong.</h1>
+        <button type="button" class="modal-close" onclick="App.CloseError();">&times;</button>
+        <img src="../assets/error.png" class="error_image">
+    </div>
 
   </section>
 </template>
@@ -207,13 +194,9 @@
 
 <script>
 export default {
-fetch({store, redirect}) {
-	if ((!store.state.user) || (!store.state.user)) {
-	App.reloadArticlesPage()
-	}
-	else {
-	App.reloadArticlesPage()
-	}
+  fetch({store, redirect}) {
+    if ((!store.state.user) || (!store.state.user)) {}
+  	else {}
 	},
 }
 
@@ -238,75 +221,7 @@ fetch({store, redirect}) {
     
 
 }
-.table1-header{
 
-    
-    height: 40px;
-    width: 1150px;
-    position: absolute;
-    left: 80px;
-    top:100px;
-    background-color: white;
-    opacity: .8;
-    overflow: auto;
-    white-space: nowrap;
-    z-index: 0;
-
-    
-
-}
-
-.sell{
-  position: absolute;
-  top:50%;
-  left: 37%;
-  font-family: sans-serif;
-    display: block;
-    font-weight: 300;
-    font-size: 50px;
-    color: white;
-    letter-spacing: 1px;
-}
-
-
-.row h1{
-
-    position: absolute;
-    left: 300px;
-    top:100px;
-
-}
-
-.row p1{
-    position: absolute;
-    top:140px;
-}
-
-.row p2{
-    position: absolute;
-    top:160px;
-}
-
-
-
-
-.col-1{
-
-    
-    height: 500px;
-    width: 1150px;
-    position: absolute;
-    left: 80px;
-    top:200px;
-    background-color: white;
-    opacity: .8;
-    overflow: auto;
-    white-space: nowrap;
-    z-index: 0;
-
-    
-
-}
 
 .table1-header{
 
@@ -324,13 +239,6 @@ fetch({store, redirect}) {
     font-weight: bolder;
     text-align: center;
 }
-
-
-
-
-
-
-
 
 
 .table2{
@@ -546,13 +454,7 @@ fetch({store, redirect}) {
   color: white;
 }
 
-.checkmark-image{
-  position: absolute;
-  top: 160px;
-  left: 120px;
 
-  width: 160px;;
-}
 
 .modal .close{
     position: absolute;
@@ -584,27 +486,6 @@ fetch({store, redirect}) {
 .collapse {
     list-style-type: none;
     font-size: 20px;
-}
-
-
-
-.uga-engr{
-    width: 300px;
-    height: auto;
-    position: fixed;
-    left: 900px;;
-    top:730px;
-}
-
-.front-link {
-    background-color: black;
-  color: white;
-  padding: 50px 100px;
-    color: #ffffff;
-    position: absolute;
-    top: 10px;
-    left: 60px;
-    z-index: 50;
 }
 
 .modal-dialog {
@@ -772,8 +653,14 @@ fetch({store, redirect}) {
 position: absolute;
 top: 40px;
 left: 0px;
-
   
+}
+
+.checkmark-image{
+  position: absolute;
+  top: 160px;
+  left: 120px;
+  width: 160px;;
 }
 
 
