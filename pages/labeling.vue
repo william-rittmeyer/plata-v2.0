@@ -1,6 +1,5 @@
 <template>
   <section>
-here is labeling
 
   </section>
 </template>
