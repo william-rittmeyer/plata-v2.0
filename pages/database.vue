@@ -9,15 +9,6 @@
 <script>
 export default {
 
-	fetch({store, redirect}) {
-	if (
-	!store.state.user || 
-	(store.state.user && store.state.user.
-	isAuthenticated ===false)
-	) {
-		return redirect('/')
-		}
-	}
 }
 
 </script>
@@ -37,3 +28,4 @@ export default {
 }
 
 </style>
+
