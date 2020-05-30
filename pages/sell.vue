@@ -174,7 +174,7 @@
         <br/>
         <br/>
         <br/>
-        <a id="readlink" href="somelink.com"><button class="download-button">Download Link</button></a>
+        <a id="readlink" href="somelink.com" target="_blank"><button class="download-button">Download Link</button></a>
         <button type="button" class="modal-close" onclick="App.CloseReceipt();">&times;</button>
       </div>
     </div>
@@ -454,6 +454,9 @@ export default {
   color: white;
 }
 
+.row{
+  float: left;
+}
 
 
 .modal .close{
