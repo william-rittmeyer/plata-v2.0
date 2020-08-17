@@ -1,7 +1,4 @@
 
-
-For full design document: https://docs.google.com/document/d/1toa4i6LnzxZ9UXvfgZ9b_S7Un22xLKm8j-727t-tEDo/edit
-
 ## Build Setup
 
 # install dependencies in main project folder
