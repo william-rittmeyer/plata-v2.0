@@ -27,7 +27,7 @@
       </h1>
       <br></br>
       <h2 class="subtitle">
-        An Ethereum-based platform for exchanging digital assets
+        An Ethereum-based platform for exchanging genetic data
       </h2>
 
       <nuxt-link
