@@ -1,13 +1,14 @@
-# Plata-2.0
-
-An Ethereum-based DApp on the Ropsten network faciliating the monetary exchange of any digital asset. Written in Vue Js framework and includes user authentification.
 
 ## Build Setup
+
+Need following environmental variables in main directory and named ".env":
+
+https://drive.google.com/file/d/1UJFy7cZ9SBUEpXPEC6tyunCCKXr1O9Am/view?usp=sharing
 
 # install dependencies in main project folder
 $ npm install
 
-# serve with hot reload at localhost:3000
+# dev server at localhost:3000
 $ npm run dev
 
 # build for production and launch server

@@ -41,6 +41,7 @@
     "truffle-hdwallet-provider": "^1.0.17",
     "v-datatable-light": "^0.8.1",
     "vue": "^2.6.11",
+    "vue-particles": "^1.0.9",
     "vue-simple-spinner": "^1.2.10",
     "vuetify": "^2.2.32",
     "web3": "^1.2.8"

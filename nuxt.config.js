@@ -15,6 +15,7 @@ module.exports = {
       }
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: 'favicon.ico' }],
+    link: [{ rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap' }],
 
     script: [
       { 
@@ -33,9 +34,6 @@ module.exports = {
         src: '/js/web3.min.js',
       },
       { 
-        src: '/js/app.js',
-      },
-      { 
         src: '/js/bundle.js',
       },
              
@@ -52,7 +50,7 @@ module.exports = {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [],
+  plugins: ['@/plugins/particles'],
   /*
    ** Nuxt.js dev-modules
    */
@@ -88,6 +86,7 @@ module.exports = {
     /*
      ** You can extend webpack config here
      */
+    transpile: ['vue-particles'],
     extend(config, ctx) {}
   }
 }

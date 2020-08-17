@@ -26,7 +26,7 @@ App = {
                 console.error("Unable to retrieve your accounts! You have to approve this application on Metamask");
             }
         } else if(window.web3) {
-            window.web3 = new Web3(web3.currentProvider || "ws://localhost:8545");
+            window.web3 = new Web3(window.web3.currentProvider || "ws://localhost:8545");
             App.displayAccountInfo();
             return App.initContract();
         } else {
@@ -42,7 +42,6 @@ App = {
         const balance = await window.web3.eth.getBalance(App.account);
         $('#accountBalance').text(window.web3.utils.fromWei(balance, "ether") + " ETH");
         //$('#modal-purchase').attr("hidden",true);
-       
     },
 
     initContract: async () => {
@@ -60,7 +59,7 @@ App = {
         if(App.logSellArticleEventListener == null) {
             App.logSellArticleEventListener = marketInstance.LogSellArticle({fromBlock: '0'}).on("data", event => {
                     $('#' + event.id).remove();
-                    $('#events').append('<li class="list-group-item" id="' + event.id + '">' + event.returnValues._name + ' is for sale</li>');
+                    $('#events').append('<li class="list-group-item text-xs" id="' + event.id + '">' + event.returnValues._name + ' is for sale</li>');
                     App.reloadArticles();
                 })
                 .on("error", error => {
@@ -70,7 +69,7 @@ App = {
         if(App.logBuyArticleEventListener == null) {
             App.logBuyArticleEventListener = marketInstance.LogBuyArticle({fromBlock: '0'}).on("data", event => {
                     $('#' + event.id).remove();
-                    $('#events').append('<li class="list-group-item" id="' + event.id + '">' + event.returnValues._buyer + ' bought ' + event.returnValues._name + '</li>' );
+                    $('#events').append('<li class="list-group-item text-xs" id="' + event.id + '">' + event.returnValues._buyer + ' bought ' + event.returnValues._name + '</li>' );
 
 
                    // $('#modal-bg2').modal('show');
@@ -328,7 +327,7 @@ App = {
     displayArticle: (id, seller, name, description, price) => {
         // Retrieve the article placeholder
         const articlesRow = $('#articlesRow');
-        const etherPrice = web3.utils.fromWei(price, "ether");
+        const etherPrice = window.web3.utils.fromWei(price, "ether");
 
         // Retrieve and fill the article template
         var articleTemplate = $('#articleTemplate');
