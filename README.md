@@ -1,6 +1,8 @@
 
 ## Build Setup
 
+Need following environmental variables in main directory and names ".env"
+
 # install dependencies in main project folder
 $ npm install
 
