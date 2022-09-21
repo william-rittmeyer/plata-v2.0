@@ -43,7 +43,7 @@
     "vue": "^2.6.11",
     "vue-particles": "^1.0.9",
     "vue-simple-spinner": "^1.2.10",
-    "vuetify": "^2.2.32",
+    "vuetify": "^2.6.10",
     "web3": "^1.2.8"
   },
   "devDependencies": {
