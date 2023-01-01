@@ -36,7 +36,7 @@
     "moment": "^2.26.0",
     "mysql2": "1.7.0",
     "net": "^1.0.2",
-    "nuxt": "^2.0.0",
+    "nuxt": "^2.12.2",
     "sequelize": "5.18.1",
     "truffle-hdwallet-provider": "^1.0.17",
     "v-datatable-light": "^0.8.1",
@@ -51,7 +51,7 @@
     "@nuxtjs/eslint-module": "^1.0.0",
     "@nuxtjs/stylelint-module": "^3.1.0",
     "@nuxtjs/tailwindcss": "^1.0.0",
-    "@nuxtjs/vuetify": "^1.11.2",
+    "@nuxtjs/vuetify": "^1.12.3",
     "@vue/test-utils": "^1.0.3",
     "babel-eslint": "^10.0.1",
     "babel-jest": "^24.1.0",
@@ -65,12 +65,12 @@
     "nodemon": "^1.18.9",
     "prettier": "^1.19.1",
     "sass": "^1.26.8",
-    "sass-loader": "^8.0.0",
+    "sass-loader": "^13.2.0",
     "sequelize-cli": "5.5.1",
     "stylelint": "^10.1.0",
     "vue-cli-plugin-vuetify": "~2.0.5",
     "vue-jest": "^4.0.0-0",
-    "vuetify-loader": "^1.4.4"
+    "vuetify-loader": "^1.9.2"
   },
   "husky": {
     "hooks": {
