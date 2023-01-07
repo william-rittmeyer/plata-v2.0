@@ -36,7 +36,7 @@
     "moment": "^2.26.0",
     "mysql2": "1.7.0",
     "net": "^1.0.2",
-    "nuxt": "^2.0.0",
+    "nuxt": "^2.15.8",
     "sequelize": "5.18.1",
     "truffle-hdwallet-provider": "^1.0.17",
     "v-datatable-light": "^0.8.1",
